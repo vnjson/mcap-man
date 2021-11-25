@@ -1,0 +1,64 @@
+
+- clear: all
+  next: true
+
+
+- dialog-box: true
+  next: true
+- scene: class-room
+  audio:
+    name: main-theme
+    action: play
+    speed: 0.3
+    volume: 0.01
+    loop: true
+  $: test 0
+
+#- jump: _mark1
+
+- status-bar: true
+  menu:
+    _mark1: Прыгаем по метке и там присваиваем данные
+    _mark2: Ещё один пукт меню
+
+
+- _mark1: true
+  $: Записываю данные
+  set-data:
+      age: меньше12
+      name: Сергей
+
+
+# получаем данные данные в хранилище $vnjs.current.data
+- switch:
+    age===меньше12:
+      $: Меньше 12
+    age===больше12:
+      $: Возраст больше 12 лет
+
+- dialog-box: false
+  switch:
+    name===Сергей: # приимает объект для выполнения
+      $: Показываем диалоговое окно
+      dialog-box: true
+      scene: lake
+      sound: pianino
+
+
+- _mark2: true
+  $: Метка 2
+#  scene: class-room
+#  
+#  next: true
+#  htmlChunk: false
+#  redBox: false
+- menu:
+    zim-label: Как подключить zim
+    label_1_tree__fs: Файловая структура
+    yaml-scripts: YAML скрипты
+    plug: Список плагинов
+    disabled: ---
+    $root.$init: Вернуться в начало
+    onClick:
+      hands: true
+      dialog-box: true

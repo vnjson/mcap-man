@@ -1,0 +1,5 @@
+- c: Сцена это изображение на фоне [scene class-room]
+  cloud: false
+- scene: lab
+- scene: lake
+- jump: $init

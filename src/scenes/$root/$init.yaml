@@ -1,0 +1,19 @@
+- clear: all
+  next: true
+
+- main-menu:
+    beginning.$init: Начинающий
+    experienced.$init: Опытный
+    disabled_item: Продвинутый
+    css:
+      width: 300px
+      top: 50px
+      transform: unset # убираем смещение центра
+      left: unset
+    onClick:
+      dialog-box: true
+      hands: true
+
+      # right: 0 Применится если убрать значение left: unset
+  scene: lab
+
