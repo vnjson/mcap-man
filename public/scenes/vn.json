@@ -1,4 +1,154 @@
 {
+  "$items": {
+    "assets": [
+      {
+        "name": "book",
+        "url": "./scenes/assets/book.png"
+      },
+      {
+        "name": "cuirass",
+        "url": "./scenes/assets/cuirass.png"
+      },
+      {
+        "name": "egg",
+        "url": "./scenes/assets/egg.png"
+      },
+      {
+        "name": "emerald",
+        "url": "./scenes/assets/emerald.png"
+      },
+      {
+        "name": "fist",
+        "url": "./scenes/assets/fist.png"
+      },
+      {
+        "name": "gear",
+        "url": "./scenes/assets/gear.png"
+      },
+      {
+        "name": "hat",
+        "url": "./scenes/assets/hat.png"
+      },
+      {
+        "name": "pokeball",
+        "url": "./scenes/assets/pokeball.png"
+      },
+      {
+        "name": "potion",
+        "url": "./scenes/assets/potion.png"
+      },
+      {
+        "name": "row-1-column-1",
+        "url": "./scenes/assets/row-1-column-1.png"
+      },
+      {
+        "name": "row-1-column-2",
+        "url": "./scenes/assets/row-1-column-2.png"
+      },
+      {
+        "name": "row-2-column-1",
+        "url": "./scenes/assets/row-2-column-1.png"
+      },
+      {
+        "name": "row-2-column-2",
+        "url": "./scenes/assets/row-2-column-2.png"
+      },
+      {
+        "name": "sword",
+        "url": "./scenes/assets/sword.png"
+      },
+      {
+        "name": "vnjson",
+        "url": "./scenes/assets/vnjson.png"
+      }
+    ],
+    "store": [
+      {
+        "id": "book",
+        "name": "Книга",
+        "type": "equip"
+      },
+      {
+        "id": "sword",
+        "name": "Меч",
+        "type": "equip"
+      },
+      {
+        "id": "fist",
+        "name": "Боксёрская перчатка",
+        "type": "equip"
+      },
+      {
+        "id": "emerald",
+        "name": "Изумруд",
+        "type": "accessor"
+      },
+      {
+        "id": "potion",
+        "name": "Элексир",
+        "type": "accessor"
+      },
+      {
+        "id": "cuirass",
+        "name": "Доспехи",
+        "type": "equip"
+      },
+      {
+        "id": "hat",
+        "name": "Шляпа",
+        "type": "cloth"
+      },
+      {
+        "id": "egg",
+        "name": "Яйцо",
+        "type": "craft"
+      },
+      {
+        "id": "vnjson",
+        "name": "Лого",
+        "type": "build",
+        "disabled": true
+      },
+      {
+        "id": "row-1-column-2",
+        "name": "top right",
+        "type": "craft",
+        "target": [
+          "vnjson"
+        ]
+      },
+      {
+        "id": "gear",
+        "name": "Шестеренка",
+        "type": "accessor",
+        "disabled": true
+      },
+      {
+        "id": "row-2-column-2",
+        "name": "right bottom",
+        "type": "craft",
+        "target": [
+          "vnjson"
+        ]
+      },
+      {
+        "id": "row-1-column-1",
+        "name": "top left",
+        "type": "craft",
+        "target": [
+          "vnjson"
+        ]
+      },
+      {
+        "id": "row-2-column-1",
+        "name": "left bottom",
+        "type": "craft",
+        "target": [
+          "vnjson"
+        ]
+      }
+    ]
+  },
   "$root": {
     "assets": [
       {
@@ -12,14 +162,6 @@
       {
         "name": "class-room",
         "url": "./scenes/assets/class-room.webp"
-      },
-      {
-        "name": "components",
-        "url": "./scenes/assets/components.webp"
-      },
-      {
-        "name": "dir_screens",
-        "url": "./scenes/assets/dir_screens.png"
       },
       {
         "name": "kkkk",
@@ -52,46 +194,6 @@
       {
         "name": "rozario_agro",
         "url": "./scenes/assets/rozario_agro.mp3"
-      },
-      {
-        "name": "screens",
-        "url": "./scenes/assets/screens.webp"
-      },
-      {
-        "name": "Screenshot_35",
-        "url": "./scenes/assets/Screenshot_35.png"
-      },
-      {
-        "name": "Screenshot_36",
-        "url": "./scenes/assets/Screenshot_36.png"
-      },
-      {
-        "name": "Screenshot_42",
-        "url": "./scenes/assets/Screenshot_42.png"
-      },
-      {
-        "name": "Screenshot_43",
-        "url": "./scenes/assets/Screenshot_43.png"
-      },
-      {
-        "name": "Screenshot_44",
-        "url": "./scenes/assets/Screenshot_44.png"
-      },
-      {
-        "name": "Screenshot_45",
-        "url": "./scenes/assets/Screenshot_45.png"
-      },
-      {
-        "name": "skk",
-        "url": "./scenes/assets/skk.mp3"
-      },
-      {
-        "name": "yaml2",
-        "url": "./scenes/assets/yaml2.png"
-      },
-      {
-        "name": "yaml3",
-        "url": "./scenes/assets/yaml3.png"
       }
     ],
     "$init": [
@@ -100,22 +202,25 @@
         "next": true
       },
       {
-        "main-menu": {
-          "beginning.$init": "Начинающий",
-          "experienced.$init": "Опытный",
-          "disabled_item": "Продвинутый",
-          "css": {
-            "width": "300px",
-            "top": "50px",
-            "transform": "unset",
-            "left": "unset"
-          },
+        "scene": "class-room",
+        "menu": {
+          "tutorial.entry": "Начало работы",
+          "terminal.$init": "Знакомство с терминалом",
+          "tutorial.setup": "Установка шаблона",
+          "tutorial.scenesAndLabels": "Сцены и метки",
+          "tutorial.define-chars": "Объявление персонажей",
+          "tutorial.dialog": "Написание диалогов",
+          "tutorial.nav": "Навигация по скрипту",
+          "tutorial.images": "Работа с изображениями",
+          "tutorial.audio": "Воспроизведение аудио",
+          "tutorial.embed": "Подключение внешних ресурсов",
+          "tutorial.data": "Работа с данными",
+          "tutorial.zim": "Подключение ZIMjs",
+          "plugins.$init": "Плагины",
           "onClick": {
-            "dialog-box": true,
-            "hands": true
+            "dialog-box": true
           }
-        },
-        "scene": "lab"
+        }
       }
     ],
     "characters": [
@@ -123,14 +228,7 @@
         "id": "$",
         "name": ". . . .",
         "nameColor": "#49de58",
-        "replyColor": "#a4deaa"
-      },
-      {
-        "id": "c",
-        "name": "Капитан",
-        "nameColor": "#e0b33f",
-        "replyColor": "#f2cd11",
-        "logo": "capitan"
+        "replyColor": "#b2d5f5"
       },
       {
         "id": "a",
@@ -139,58 +237,269 @@
         "replyColor": "#cb86d1"
       },
       {
-        "id": "n",
-        "name": "Нора",
-        "nameColor": "#10a7e8",
-        "replyColor": "#8acfed"
-      }
-    ],
-    "content": [
+        "id": "ex",
+        "name": "Exec",
+        "nameColor": "red",
+        "replyColor": "brown"
+      },
       {
-        "content": [
-          {
-            "$root.$init": "Том 1",
-            "disabled": "Глава 1",
-            "beginning.plug": "Глава 2",
-            "beginning.zim-label": "Глава 3"
-          },
-          {
-            "experienced.$init": "Том 2",
-            "disabled": "Глава 1",
-            "experienced.how-write-plugin": "Глава 2"
-          },
-          {
-            "disabled": "Том 3",
-            "experienced.test": "Глава 1",
-            "experienced.$init": "Глава 2"
-          },
-          {
-            "disabled": "Том 4",
-            "experienced.test": "Глава 1",
-            "experienced.$init": "Глава 2"
-          }
-        ]
+        "id": "s",
+        "name": "Сергей",
+        "nameColor": "rgb(120, 33, 170)",
+        "replyColor": "#11bef2"
+      },
+      {
+        "id": "m",
+        "name": "Марсианин",
+        "nameColor": "#ff660d",
+        "replyColor": "#de6118"
+      },
+      {
+        "id": "lu",
+        "name": "Лунянин",
+        "nameColor": "#08ffef",
+        "replyColor": "#10ded0"
       }
     ],
     "data": {
-      "api.js": "\"  plugins = {}\\n\\n  current = {\\n    index: 0,\\n    labelName: '$init',\\n    sceneName: '$root',\\n    character: {id: '$', name: 'Norrator'},\\n    data: { \\n      points: 0\\n    },\\n    allAssets: []\\n  }\\n\\n  $store = {}\\n\\n  getAssetByName (name){}\\n\\n  getDataByName (id){}\\n\\n  getCurrentLabelBody (){}\\n\\n  getCurrentCharacter (){}\\n\\n  getCharacterById (id){}\\n\\n  getCtx (){}\\n\\n  setTree (tree){}\\n\\n  on (event, handler){}\\n\\n  emit (event, ...args){}\\n\\n  off (event){}\\n\\n  exec (ctx){}\\n\\n  next (){}\\n\\n  use (plugin){}\\n\"",
+      "chars1.yaml": "\"/$root\\n├───$init.yaml\\n├───package.yaml\\n└───characters.yaml\\n\"",
+      "chars2.yaml": "\"- id: $\\n\\n\"",
+      "chars3.yaml": "\"- id: $\\n  name: . . . .\\n\"",
+      "chars4.yaml": "\"- id: $\\n  name: . . . .\\n  nameColor: '#49de58'\\n\"",
+      "chars5.yaml": "\"- id: $\\n  name: . . . .\\n  nameColor: '#49de58'\\n  replyColor: '#b2d5f5'\"",
+      "chars6.yaml": "\"- id: $\\n  name: . . . .\\n  nameColor: '#49de58'\\n  replyColor: '#b2d5f5'\\n\\n- id: a\\n  name: Алиса\\n  nameColor: '#bb38c7'\\n  replyColor: '#cb86d1'\\n\"",
+      "chars7.yaml": "\"- id: $\\n  name: . . . .\\n  nameColor: '#49de58'\\n  replyColor: '#b2d5f5'\\n\\n- id: a\\n  name: Алиса\\n  nameColor: '#bb38c7'\\n  replyColor: '#cb86d1'\\n\\n- id: s\\n  name: Сергей\\n  nameColor: rgb( 120, 33, 170 )\\n  replyColor: '#11bef2'\"",
+      "chars7_1.yaml": "\"- id: $\\n  name: . . . .\\n  nameColor: '#49de58'\\n  replyColor: '#b2d5f5'\\n\\n- id: a\\n  name: Алиса\\n  nameColor: '#bb38c7'\\n  replyColor: '#cb86d1'\\n\\n- id: s\\n  name: Сергей\\n  nameColor: rgb( 120, 33, 170 )\\n  replyColor: '#11bef2'\\n\\n- id: ex\\n  name: Exec\\n  nameColor: red\\n  replyColor: brown\"",
+      "chars8.yaml": "\"- a: Там на неведомых дорожках\\n- s: Следы невиданных зверей;\\n- a: Избушка там на курьих ножках\\n- Стоит без окон, без дверей;\\n- Строка без индификатора произносится от имени автора\\n- s: Там лес и дол видений полны;\\n- $: Там о заре прихлынут волны\\n- ex: Индификатор можнет содержать больше чем один символ\\n- $: Символ $ зарезервирован за автором в файле characters.yaml\\n- a: На брег песчаный и пустой,\\n- И тридцать витязей прекрасных\\n- Чредой из вод выходят ясных,\\n- s: И с ними дядька их морской;\\n- jump: $root.$init\"",
+      "embed.yaml": "\"# ./src/scenes/$root/embed.yaml\\nkey1: <iframe width=\\\"100%\\\" height=\\\"570px\\\" src=\\\"https://...\\\"></iframe>\\nkey2:  <iframe width=\\\"100%\\\" height=\\\"570px\\\" src=\\\"https://...\\\"></iframe>\"",
+      "embed2.yaml": "\"- key1: true\\n  $: Показ внешнего ресурся\\n\\n- key2: true\\n  key1: false #скрыть\\n  $: Показ второго внешнего ресурся\\n\\n- key2: false\\n  jump: $root.$init\"",
       "fs_1.txt": "\"/src/\\n├───volume_1\\n│   ├───assets\\n│   │   ├───background.png\\n│   │   └───audio1.mp3\\n│   ├───chapter_2.yaml\\n│   └───$init.yaml\\n├───volume_2\\n│   ├───assets\\n│   │   └───char1.png\\n│   ├───data\\n│   │   ├───somescritp.py //plane_text to json\\n│   │   └───somefile.txt\\n│   ├───label_prefix\\n│   │   ├───label_1.yaml\\n│   │   └───label_2.yaml\\n│   │\\n│   └───$init.yaml\"",
-      "lesson_1.lua": "\"-- defines a factorial function\\nfunction fact (n)\\n  if n == 0 then\\n    return 1\\n  else\\n    return n * fact(n-1)\\n  end\\nend\\n    \\nprint(\\\"enter a number:\\\")\\na = io.read(\\\"*number\\\")        -- read a number\\nprint(fact(a))\"",
-      "lesson_1.py": "\"def count_by(arr, fn=lambda x: x):\\n    key = {}\\n    for el in map(fn, arr):\\n        key[el] = 0 if el not in key else key[el]\\n        key[el] += 1\\n    return key\""
+      "images.yaml": "\"\\n- scene: imagename\\n- scene: false\\n\\n- slide: imagename\\n- slide: false\\n\\n- center: imagename1\\n- left: imagename2\\n- right: imagename3\\n\\n- center: false\\n- left: false\\n- right: false\\n\\n- term: imagename\\n\\n- term: false\"",
+      "nav0.yaml": "\"./$root/$init.yaml\\n- dialog-box: true\\n  $: Привет мир!\\n- jump: chapter1 \\n###########################\\n└───$root\\n    ├───characters.yaml\\n    ├───$init.yaml\\n    ├───chapter1.yaml\\n    ├───chapter2.yaml\\n    ├───chapter3.yaml\\n    └───chapter4.yaml\\n\\n\"",
+      "nav1.yaml": "\"./$root/$init.yaml\\n- $: Прыгаем в первую главу книги $root\\n- jump: chapter3 \\n###########################\\n└───$root\\n    ├───characters.yaml\\n    ├───$init.yaml\\n    ├───chapter1.yaml\\n    ├───chapter2.yaml\\n    └───chapter3.yaml\\n\"",
+      "nav10.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n\"",
+      "nav11.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n    disabled_1: Неактивный элемент должен включать в себя часть слова dissabled\\n\"",
+      "nav12.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n    disabled_1: Неактивный элемент должен включать в себя часть слова dissabled\\n    next: Никуда не прыгать, а продолжить выполнение скрипта после меню\"",
+      "nav2.yaml": "\"./$root/chapter3.yaml\\n- $: Прыгаем во вторую книгу\\n- jump: book_2.$init\\n###########################\\n├───$root\\n│   ├───characters.yaml\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   ├───chapter2.yaml\\n│   └───chapter3.yaml\\n├───book_2\\n│   ├───$init.yaml\\n│   └───chap1.yaml\"",
+      "nav3.yaml": "\"./book_2/$init.yaml\\n- $: Прыгаем в третью книгу в главу test_0\\n- jump: book_3.test_0\\n###########################\\n├───$root\\n│   ├───characters.yaml\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   ├───chapter2.yaml\\n│   └───chapter3.yaml\\n├───book_2\\n│   ├───$init.yaml\\n│   └───chap1.yaml\\n└───book_3\\n    ├───$init.yaml\\n    └───test_0.yaml\"",
+      "nav4.yaml": "\"./book_3/test_0.yaml\\n- $: Так же можно прыгнуть на конкретную строчку внутри текущей главы\\n- jump: book_3.test_0.3\\n###########################\\n# Отсчёт строк внутри главы начинается от нуля\\n- test 0\\n- test 1\\n- test 2\\n- test 3 # сюда будет сделан прыжок\\n- test 4\\n- test 5\"",
+      "nav4_0.yaml": "\"- test 0\\n\"",
+      "nav4_1.yaml": "\"- test 0\\n- test 1\\n\"",
+      "nav4_2.yaml": "\"- test 0\\n- test 1\\n- test 2\"",
+      "nav4_3.yaml": "\"- test 0\\n- test 1\\n- test 2\\n- test 3\\n\"",
+      "nav4_4.yaml": "\"- test 0\\n- test 1\\n- test 2\\n- test 3\\n- test 4\"",
+      "nav4_5.yaml": "\"- test 0\\n- test 1\\n- test 2\\n- test 3\\n- test 4\\n- test 5\"",
+      "nav5.yaml": "\"- scene:\\n    url: http://app1234.xyz/assets/earch.jpg\\n  next: true\\n- . . . .\\n- . . . . . . . . . .\\n- jump: chunks.target\\n# ./scenes/chunks/target.yaml\\n- a: Там на неведомых дорожках\\n- target: _mark1 # jump to _mark1\\n- s: Следы невиданных зверей;\\n  _mark2: true\\n- s: Избушка там на курьих ножках\\n- s: Стоит без окон, без дверей;\\n- s: Там лес и дол видений полны;\\n- jump: tutorial.nav\\n- a: Там о заре прихлынут волны\\n  _mark1: true  \\n- a: На брег песчаный и пустой,\\n- a: И тридцать витязей прекрасных\\n- target: _mark2 # jump to _mark2\"",
+      "nav6.yaml": "\"- Ночь, улица, фонарь, аптека,\\n- Бессмысленный и тусклый свет.\\n- Живи еще хоть четверть века —\\n- Все будет так. Исхода нет.\\n- dialog-box: false\\n  scene:\\n    url: http://app1234.xyz/assets/earch.jpg\\n  menu:\\n    planets.luna: Отправиться на Луну\\n    planets.mars: Лучше на Марс \\n\\n#########\\n/scenes\\n├───$root\\n│   └───$init.yaml\\n├───planets\\n│   ├───luna.yaml \\n│   ├───mars.yaml \\n\"",
+      "nav6_1.yaml": "\"# ./src/scenes/planets/luna.yaml\\n- dialog-box: true\\n  lu: Привет человек\\n- lu: Тебе здесь не рады\\n- lu: Возвращайся к своим, на Марс\\n- jump: mars\"",
+      "nav6_2.yaml": "\"# ./src/scenes/planets/mars.yaml\\n- dialog-box: true\\n  m: Добро пожаловать домой!\\n- m: Давно не видели человеков\\n\\n- dialog-box: false\\n  menu:\\n    m: С какой целью вы сюда прибыли?\\n    _mark2: Осмотреть достопремичательности\\n    disabled_1: Захватить Марс\\n    disabled_aaa: Пригласить на Землю\\n    marsahod: Забрать марсоход на ремонт\\n    next: Промолчать\\n# next\\n- m: Отказываетесь отвечать?\\n  dialog-box: true\\n- m: Тогда вам здесь не рады, возвращайтесь туда откуда прибыли\\n- jump: $root.$init\\n#####################\\n- _mark2: true\\n  dialog-box: true\\n  $: Хотя тут особо не на что смотреть, пойду лучше домой!\\n- jump: $root.$init\"",
+      "nav7.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n\"",
+      "nav8.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n\"",
+      "nav9.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу / сцену\\n\"",
+      "nav_main_menu.yaml": "\"- clear: all\\n  next: true\\n\\n- main-menu:\\n    beginning.$init: Начинающий\\n    experienced.$init: Опытный\\n    disabled_item: Продвинутый\\n    onClick:\\n      dialog-box: true\\n      hands: true\\n      status-bar: true\\n  audio: false\\n  scene: lab\"",
+      "reply1.yaml": "\"- dialog-box: true\\n  $: Что бы отображались реплики, \\n     необходимо сначала отобразить диалоговое окно\\n- a: Там королевич мимоходом\\n- a: Пленяет грозного царя;\\n- s: Там в облаках перед народом\\n- Через леса, через моря\\n- s: Колдун несёт богатыря;\\n- В темнице там царевна тужит,\\n- $: А бурый волк ей верно служит;\\n- a: В некоторых случаях требуется скрыть диалоговое окно. \\n  dialog-box: false\\n\\n\"",
+      "reply2.yaml": "\"- \\\"Что бы экранировать специальные символы !! %% && :: '' ##  заключите строку в ковычки\\\"\\n- $: Реплика внутри объекта\\n  \\n- a: Реплика от другого персонажа\\n- $: 'Использование html тегов внутри  <i style=\\\"color: #d405f0\\\">реплики</i>'\\n\\n\\n- '1111111' #- 1111111 # просто цифры в строке необходимо экранировать иначе не выполнится\\n- 1111test  # так можно\\n- test 1111  # так можно\\n- $: 1111111 # так тоже работает\\n\\n- jump: $root.$init\"",
+      "scenes1.yaml": "\"/scenes/\\n├───book_0\\n├───book_1\\n├───book_2\\n├───book_3\\n├───book_4\\n├───book_5\\n├───book_6\\n├───book_7\\n├───book_8\\n└───book_9\\n\\n\"",
+      "scenes2.yaml": "\"/scenes/\\n├───book_1\\n│   ├───chapter_1\\n│   ├───chapter_2\\n│   └───chapter_3\\n├───book_2\\n│   ├───chapter_1\\n│   ├───chapter_2\\n│   └───chapter_3\\n└───book_3\\n    ├───chapter_1\\n    ├───chapter_2\\n    └───chapter_3\\n\"",
+      "scenes3.yaml": "\"\\n/scenes\\n└───$root\\n    └───$init.yaml\\n\"",
+      "scenes31.yaml": "\"/scenes/\\n├───$root\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   └───chapter2.yaml\\n├───scene1\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   └───chapter2.yaml\\n└───scene2\\n    ├───$init.yaml\\n    ├───chapter1.yaml\\n    └───chapter2.yaml\\n\"",
+      "scenes4.yaml": "\"- dialog-box: true\\n  next: true  \\n- У лукоморья дуб зелёный;\\n- Златая цепь на дубе том\\n- И днём и ночью кот учёный\\n- Всё ходит по цепи кругом;\\n- Идёт направо — песнь заводит,\\n- Налево — сказку говорит.\\n- Там чудеса там леший бродит,\\n- Русалка на ветвях сидит;\\n\"",
+      "scenes5.yaml": "\"/scenes\\n└───$root\\n    ├───$init.yaml\\n    └───package.yaml\\n\\n# package.yaml\\nname: Название\\ndebug: true  #false  \"",
+      "setup1.yaml": "\"# git clone https://github.com/vnjson/mcap.git\"",
+      "setup2.yaml": "\"# cd ./mcap\\n\\n/mcvnjson\\n├───public\\n├───src\\n├───rollup.config.js\\n└───package.json\\n\"",
+      "setup3.yaml": "\"# npm install\"",
+      "setup4.yaml": "\"# npm run dev\\n\\nhttp://localhost:9000\"",
+      "setup5.yaml": "\"# cd ./scenes\\n\\n/src/scenes\\n└───$root\\n    └───$init.yaml\\n\"",
+      "setup6.yaml": "\"Команды предварительной подготовки\\n1 # git clone https://github.com/vnjson/mcap.git\\n2 # cd ./mcap\\n3 # npm install\\n4 # npm run dev\\n\""
     },
     "embed": {
-      "yt-salut": "<iframe width=\"100%\" height=\"570px\" src=\"https://www.youtube.com/embed/a_o-P-lIDEA?start=50\"></iframe>"
-    },
-    "html": {
-      "qr-code": "<img src=\"data:image/png;base64,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\" style=\"display: block;\">"
+      "key1": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/7E_yOnAWdUk?start=62\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     "package": {
       "name": "Руководство издателя",
+      "version": "0.7.1",
       "debug": true,
-      "preload": false
+      "preload": true
     }
   },
-  "beginning": {
+  "chunks": {
+    "assets": [],
+    "target": [
+      {
+        "a": "Там на неведомых дорожках"
+      },
+      {
+        "target": "_mark1"
+      },
+      {
+        "s": "Следы невиданных зверей;",
+        "_mark2": true
+      },
+      {
+        "s": "Избушка там на курьих ножках"
+      },
+      {
+        "s": "Стоит без окон, без дверей;"
+      },
+      {
+        "s": "Там лес и дол видений полны;"
+      },
+      {
+        "jump": "tutorial.nav"
+      },
+      {
+        "a": "Там о заре прихлынут волны",
+        "_mark1": true
+      },
+      {
+        "a": "На брег песчаный и пустой,"
+      },
+      {
+        "a": "И тридцать витязей прекрасных"
+      },
+      {
+        "target": "_mark2"
+      }
+    ]
+  },
+  "planets": {
+    "assets": [],
+    "luna": [
+      {
+        "scene": {
+          "url": "http://app1234.xyz/assets/ship.png"
+        },
+        "timeout": {
+          "timer": 2000,
+          "exec": {
+            "next": true
+          }
+        }
+      },
+      {
+        "scene": {
+          "url": "http://app1234.xyz/assets/luna.webp"
+        },
+        "timeout": {
+          "timer": 2000,
+          "exec": {
+            "next": true
+          }
+        }
+      },
+      {
+        "dialog-box": true,
+        "lu": "Привет человек",
+        "slide": {
+          "url": "http://app1234.xyz/assets/lunyanin.png"
+        },
+        "scene": false
+      },
+      {
+        "lu": "Тебе здесь не рады"
+      },
+      {
+        "lu": "Отправляйся лучше на Марс. Там более рудушно принимают гостей."
+      },
+      {
+        "warn": "Не забываем задокументировать onClick",
+        "next": true
+      },
+      {
+        "warn": "Не забываем про main-menu",
+        "next": true
+      },
+      {
+        "warn": "Не забываем и про плагин content",
+        "next": true
+      },
+      {
+        "jump": "mars"
+      }
+    ],
+    "mars": [
+      {
+        "clear": "all",
+        "next": true
+      },
+      {
+        "scene": {
+          "url": "http://app1234.xyz/assets/ship.png"
+        },
+        "timeout": {
+          "timer": 2000,
+          "exec": {
+            "next": true
+          }
+        }
+      },
+      {
+        "$": "Мы подлетаем!!!",
+        "dialog-box": true
+      },
+      {
+        "dialog-box": false,
+        "scene": {
+          "url": "http://app1234.xyz/assets/mars.jpg"
+        },
+        "timeout": {
+          "timer": 2000,
+          "exec": {
+            "next": true
+          }
+        }
+      },
+      {
+        "dialog-box": true,
+        "m": "Добро пожаловать!",
+        "scene": false,
+        "slide": {
+          "url": "http://app1234.xyz/assets/marsianin.webp"
+        }
+      },
+      {
+        "m": "Давно не видели человеков"
+      },
+      {
+        "dialog-box": false,
+        "slide": false,
+        "scene": {
+          "url": "http://app1234.xyz/assets/mars.jpg"
+        },
+        "term": false,
+        "menu": {
+          "m": "С какой целью вы сюда прибыли?",
+          "_mark2": "Осмотреть достопремичательности",
+          "disabled_1": "Захватить Марс",
+          "disabled_aaa": "Пригласить на Землю",
+          "tutorial.nav": "Промолчать и по тихому свалить домой",
+          "next": "Промолчать"
+        }
+      },
+      {
+        "m": "Отказываетесь отвечать?",
+        "dialog-box": true
+      },
+      {
+        "m": "Тогда вам здесь не рады, возвращайтесь туда откуда прибыли"
+      },
+      {
+        "jump": "tutorial.nav"
+      },
+      {
+        "_mark2": true,
+        "slide": {
+          "url": "http://app1234.xyz/assets/mars_delat_nechego.webp"
+        },
+        "dialog-box": true,
+        "$": "Хотя тут особо не на что смотреть, пойду лучше домой!"
+      },
+      {
+        "jump": "tutorial.nav"
+      }
+    ]
+  },
+  "plugins": {
     "assets": [],
     "$init": [
       {
@@ -198,832 +507,1118 @@
         "next": true
       },
       {
-        "dialog-box": true,
-        "next": true
-      },
-      {
-        "scene": "class-room",
-        "audio": {
-          "name": "main-theme",
-          "action": "play",
-          "speed": 0.3,
-          "volume": 0.01,
-          "loop": true
-        },
-        "$": "test 0"
-      },
-      {
-        "status-bar": true,
         "menu": {
-          "_mark1": "Прыгаем по метке и там присваиваем данные",
-          "_mark2": "Ещё один пукт меню"
-        }
-      },
-      {
-        "_mark1": true,
-        "$": "Записываю данные",
-        "set-data": {
-          "age": "меньше12",
-          "name": "Сергей"
-        }
-      },
-      {
-        "switch": {
-          "age===меньше12": {
-            "$": "Меньше 12"
-          },
-          "age===больше12": {
-            "$": "Возраст больше 12 лет"
-          }
-        }
-      },
-      {
-        "dialog-box": false,
-        "switch": {
-          "name===Сергей": {
-            "$": "Показываем диалоговое окно",
-            "dialog-box": true,
-            "scene": "lake",
-            "sound": "pianino"
-          }
-        }
-      },
-      {
-        "_mark2": true,
-        "$": "Метка 2"
-      },
-      {
-        "menu": {
-          "zim-label": "Как подключить zim",
-          "label_1_tree__fs": "Файловая структура",
-          "yaml-scripts": "YAML скрипты",
-          "plug": "Список плагинов",
-          "disabled": "---",
-          "$root.$init": "Вернуться в начало",
+          "$root.$init": ". .",
+          "jump": "jump - Прыжок между сценами и метками",
+          "$next": "next - Переход на следующий объект скрипта",
+          "target": "target - Прыжок по якорям внутри label",
+          "timeout": "timeout - Вызывает другие плагины по истечению времени",
+          "dialog-box": "dialog-box - Диалоговое окно",
+          "scene": "scene - Отоброжение заднего фона внутри экрана",
+          "menu": "menu - Внутриигровое меню",
+          "clear": "clear - Скрывает все компоненты и отключает аудио",
+          "audio": "audio - Воспроизведение аудио",
+          "center-left-right": "center, left, right - Отображает персонажей на экране",
+          "slide": "slide - Отображает изображение по центру экрана",
+          "term": "term - Выводит код с подсведкой синтаксиса",
+          "hands": "hands - В диалоговом окне два слота (руки)",
+          "screen": "screen -\tПереключение экранов",
+          "embed": "embed - Подключение сторонних ресурсов через iFrame",
+          "html": "html - Вывод на экран кусков html кода",
+          "content": "content",
+          "animate": "animate - Добавление анимации к элементам",
+          "disabled_19": "inv - Инвентарь",
+          "qa": "qa - баллы",
+          "voice": "voice",
+          "status-bar": "status-bar",
+          "discord-log": "discord-log",
           "onClick": {
-            "hands": true,
             "dialog-box": true
           }
         }
       }
     ],
-    "label_1_tree__fs": [
+    "$next": [
       {
-        "a": "Давайте ознакомимся с базовой файловой структурой визуальной новеллы",
-        "dialog-box": true
+        "$": "Выполняет текущий объект контекста и перескакивает на следующий объект скрипта не дожидаясь действий пользователя"
       },
       {
-        "a": "В конрне проекта находится папка <i class=\"cyan\">[ src ]</i>",
-        "scene": "lake",
-        "term": "Screenshot_35",
-        "right": "Alice"
+        "ex": "Сечас будет выполнен код",
+        "term": "next.yaml"
       },
+      "Первое сообщение, которое выведится",
       {
-        "term": "Screenshot_36",
-        "a": "Screenshot_36"
-      },
-      {
-        "jump": "label_1_tree__fs2"
-      }
-    ],
-    "label_1_tree__fs2": [
-      "test 00",
-      "test 22",
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__animate": [
-      {
-        "c": "Информация о плагине [ animate ]",
-        "cloud": null,
-        "dialog-box": "clear"
-      },
-      {
-        "a": "Это снова я",
-        "center": "Alice"
-      },
-      {
-        "a": "Давайте посмотрим как работает плагин [ animate ]"
-      },
-      {
-        "animate": {
-          "selector": ".stream__show-center",
-          "duration": 300,
-          "css": {
-            "left": "+=300"
-          }
-        }
-      },
-      {
-        "a": "...",
-        "animate": {
-          "selector": ".stream__show-center",
-          "duration": 600,
-          "css": {
-            "left": "-=600",
-            "opacity": 0.5
-          }
-        }
-      },
-      {
-        "a": "...",
-        "animate": {
-          "selector": ".stream__show-center",
-          "duration": 600,
-          "css": {
-            "opacity": 1,
-            "left": "50%"
-          }
-        }
-      },
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__audio": [
-      {
-        "c": "Информация о плагине [ audio ]",
-        "cloud": false
-      },
-      {
-        "n": "Пример короткого звука. Плагин <i class=\"red\">sound</i>",
-        "sound": "pianino"
-      },
-      {
-        "a": "Это нужно для того, что бы не перекрывать канал с основной аудио дорожкой"
-      },
-      {
-        "n": "Потому что повторный вызов плагина <i class=\"cyan\">audio</i> прерывает воспроизведение предыдущей композиции",
-        "audio": false
-      },
-      {
-        "a": "Так же передаца отрицательного булевого значения flase / null прервет проигрывание музыки"
-      },
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__cloud": [
-      {
-        "c": "Информация о плагине [ cloud ]",
-        "cloud": {
-          "tags": {
-            "label_2_evt__audio": "audio",
-            "label_2_evt__jump": "jump",
-            "label_2_evt__cloud": "cloud",
-            "label_2_evt__scene": "scene",
-            "label_2_evt__show": "show"
-          }
-        }
-      },
-      "Плагин cloud используется",
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__dialog-box": [
-      {
-        "c": "Информация о плагине [ dialog-box ]",
-        "cloud": null
-      },
-      {
-        "c": "dialog-box null | true | clear"
-      },
-      {
-        "dialog-box": "clear"
-      },
-      {
-        "c": "Скрыть",
-        "dialog-box": null,
-        "timeout": {
-          "exec": {
-            "jump": "$init"
-          },
-          "timer": 1000
-        }
-      }
-    ],
-    "label_2_evt__embed": [
-      {
-        "yt-salut": true,
-        "slide": false,
-        "cloud": false,
-        "audio": false,
-        "$": "youtube"
-      },
-      {
-        "yt-salut": false,
         "next": true
-      },
-      {
-        "$": "code pend",
-        "cp-nexus": true
-      },
-      {
-        "$": "sketchfab",
-        "cp-nexus": false,
-        "3d-conni": true
-      },
-      {
-        "3d-conni": false,
-        "yt-muk": true
-      },
-      {
-        "yt-muk": false,
-        "cp-ttt": true
-      },
-      {
-        "cp-ttt": false,
-        "yt-delp": true
-      },
-      {
-        "yt-delp": false,
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__hand": [
-      {
-        "c": "Здесь идет обучение использование левой руки",
-        "cloud": null
-      },
-      {
-        "c": "Затем необходимо изучить материалы по использованию правой руки",
-        "hand-left": "pokeball"
-      },
-      {
-        "a": "А вот так предмет берется правой рукой",
-        "hand-right": "book"
-      },
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__inv": [
-      {
-        "$": "Информация о плагине [ inv ]",
-        "cloud": false,
-        "inv": true
-      },
-      "Создаем сцену [ $items ], а внутри неё папку [ assets ] и ложим в неё файлы с предметами",
-      "Далее внутри этой сцены создаем файл в котором будет описываться",
-      {
-        "n": "Название ему необходимо задать store.yaml",
-        "inv-set": "gear"
-      },
-      "Внутри него описываем структуру предметов",
-      {
-        "a": "В оный день, когда над миром новым"
-      },
-      {
-        "a": "Бог склонял лицо свое, тогда",
-        "inv-get": "emerald"
-      },
-      {
-        "a": "Солнце останавливали словом,"
-      },
-      {
-        "a": "Словом разрушали города."
-      },
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__jump": [
-      {
-        "c": "Информация о плагине [ jump ]",
-        "cloud": null
-      },
-      {
-        "c": "Плагин [ jump ] включён в стандарную библиотеку, библиотеки vnjson"
-      },
-      {
-        "c": "scene.label | label | i"
-      },
-      {
-        "jump": "$init"
-      }
-    ],
-    "label_2_evt__load-scene": [
-      {
-        "$": "Сейчас будет подгужена сцена по запросу из вне",
-        "cloud": false,
-        "dialog-box": true
-      },
-      {
-        "load-scene": "./_data/data-scene.json"
-      }
-    ],
-    "label_2_evt__next": [
-      {
-        "c": "Первая строка"
       },
       {
         "next": true
       },
       {
-        "a": "Вторая строка"
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      {
+        "next": true
+      },
+      "Второе сообщение которое выведится",
+      {
+        "jump": "$init"
+      }
+    ],
+    "animate": [
+      "animate",
+      {
+        "jump": "$init"
+      }
+    ],
+    "audio": [
+      {
+        "$": "Воспроизводит звук",
+        "term": "audio.yaml"
       },
       {
         "jump": "$init"
       }
     ],
-    "label_2_evt__scene": [
+    "center-left-right": [
+      "center left right",
       {
-        "c": "Сцена это изображение на фоне [scene class-room]",
-        "cloud": false
+        "jump": "$init"
+      }
+    ],
+    "clear": [
+      {
+        "$": "Очищает все компонеты с экрана и отключает аудио",
+        "term": "clear.yaml"
       },
+      "Файлы подключаемые через iFrame при помощи плагина embed необходимо отключать по их id",
       {
-        "scene": "lab"
-      },
+        "jump": "$init"
+      }
+    ],
+    "content": [
+      "content",
       {
-        "scene": "lake"
+        "jump": "$init"
+      }
+    ],
+    "data": {
+      "audio.yaml": "\"- audio:\\n    name: audio1\\n    action: play\\n    speed: 0.3\\n    volume: 0.01\\n    loop: true\\n\\n- audio: false # stop\\n\\n# Так же можно воспроизвести звук в отдельном аудио канале\\n\\n- sound: audio1\"",
+      "clear.yaml": "\"- clear: all\\n  next: true\"",
+      "dialog-box.yaml": "\"- dialog-box: true # отобразить компонент диалогового окна\\n- dialog-box: false # скрыть компонент диалогового окна\\n- dialog-box: clear # очишает диалоговое окно от реплики и имени персонажа\"",
+      "hands.yaml": "\"- hands: true\\n\\n- hand-left: imageName1\\n- hand-right: imageName2\\n\\n- hands: false\"",
+      "html.yaml": "\"\\n# кусочки html необходимо разместить в файле ./src/scenes/$root/html.yaml\\nhtmlChunk: <a class=\\\"qr-code\\\" href=\\\"http://qrcoder.ru\\\" target=\\\"_blank\\\"><img src=\\\"http://qrcoder.ru/code/?http%3A%2F%2Fatlant.mcacademy.ru%3A9000%2F&10&0\\\" width=\\\"370\\\" height=\\\"370\\\" border=\\\"0\\\" title=\\\"QR код\\\"></a>\\nredBox: <div class=\\\"red-box\\\"></div>\\n\\n\\n# вызывается из скрипта\\n- htmlChunkt: true\\n  redBox: true\\n\\n\\n- htmlChunk: false\\n  redBox: false\\n\\n# так же можно передать css объект\\n- htmlChunk:\\n    css: \\n      top: 50px\\n      left: 100px\\n\\n# при последующем вызове плагина\\n# указывать стили уже не обязательно\\n# он замомнит, стили ранее указанные\\n- htmlChunk: false\"",
+      "jump.yaml": "\"#scene1/part1.yaml\\n- У лукоморья дуб зелёный\\n- Златая цепь на дубе том\\n- И днём и ночью кот учёный\\n- Всё ходит по цепи кругом\\n- jump: part2 # Прыжок в метку part2 внутри этой же сцены\\n\\n#scene1/part2.yaml\\n- Идёт направо — песнь заводит,\\n- Налево — сказку говорит.\\n- jump: scene2.$init # Прыжок в другую сцену\\n\\nМожно делать прыжки на конкретную позицию внутри скрипта scene.label.index Позиция внутри label (метки) отсчитывается с нуля\\n#scene2/$init.yaml\\n\\n- Там чудеса: там леший бродит,\\n- Русалка на ветвях сидит\\n- jump: $root.$init.3\\n\\n\"",
+      "main-menu.yaml": "\"- menu:\\n    _mark1: В начало\\n    disabled: Общая концепция\\n    $root.$init: Отправиться в начало\\n    next: Список плагинов\\n\\n\\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n\\n# onClick - execute the code after the jump\\n# \\n# \\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n    css:\\n      transform: unset\\n      left: unset\\n      width: 300px\\n      top: 50px\\n      right: 20px\"",
+      "menu.yaml": "\"- menu:\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n    next: Пожалуй останусь на Земле #Можно внутри можно использовать [ next ]\\n\\n#next\\n- Земля\\n\\n### ### ##\\n- menu:\\n    $: Куда бы мне отправить #Вопрос от автора\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n### ### ##\\n- menu:\\n    a: Куда бы мне отправить #Вопрос от Алисы\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n### ### ##\\n- menu:\\n    a: Куда бы мне отправить #Вопрос от Алисы\\n    luna: Отправиться на Луну\\n    disabled: Лучше на Марс #Не активный пункт меню\\n    disabled_23: Еще один заблокированный пункт\\n    next: Дальше\\n#Что бы заблокировать пункт меню используется ключевое слово [ disable ]\\n#Но так как заблокировавнных пунктов может быть несколько, а ключи внутри объекта\\n#не могут повторяться, то к ключевому слову пожно прибавить какой-нибудь префикс disabled_24\\n\\n- $: Пример с маркировкой\\n  _mark1: true\\n\\n- menu:\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n    _mark1: В начало\\n    onClick:\\n      dialog-box: true\\n      scene: background\\n\\n# onClick - Ключевое слово. Принимает объект для выполнения this.exec({ctx})\\n- menu:\\n    _mark1: В начало\\n    disabled: Общая концепция\\n    $root.$init: Отправиться в начало\\n    next: Список плагинов\\n\\n\\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n\\n# onClick - execute the code after the jump\\n# \\n# \\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n    css:\\n      transform: unset\\n      left: unset\\n      width: 300px\\n      top: 50px\\n      right: 20px\"",
+      "next.yaml": "\"- Первое сообщение, которое выведится\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- Второе сообщение которое выведится\"",
+      "scene_p.yaml": "\"scene: imagename\"",
+      "slide.yaml": "\"- slide: Screenshot_35\\n- slide: false\\n\\n- slide:\\n    name: Screenshot_35\\n    css:\\n      top: 320px\\n      border: 15px dashed orange\\n\\n# загрузка изображения со стороннего сайта     \\n- slide:\\n    url: http://app1234.xyz/assets/ship.png\\n    css:\\n      width: 200px\\n      height: 300px\"",
+      "target.yaml": "\"- a: Там на неведомых дорожках\\n- target: _mark1 # jump to _mark1\\n- s: Следы невиданных зверей;\\n  _mark2: true\\n- s: Избушка там на курьих ножках\\n- s: Стоит без окон, без дверей;\\n- s: Там лес и дол видений полны;\\n- jump: $init\\n- a: Там о заре прихлынут волны\\n  _mark1: true  \\n- a: На брег песчаный и пустой,\\n- a: И тридцать витязей прекрасных\\n- target: _mark2 # jump to _mark2\"",
+      "term.yaml": "\"- term: lesson_1.py #planeText[extname]\\n\\n- term: lesson_1.lua  \\n\\n- term: imageName # выводит изображение в компоненте терминала\\n\\n- term: false # скрыть терминал\\n\\n- term: clear # очистить терминал\"",
+      "term_1.yaml": "\"/scenes\\n├───$root\\n│   ├───assets\\n│   ├───data\\n│   │   ├───lesson_1.lua\\n│   │   └───lesson_1.py\"",
+      "timeout.yaml": "\"- timeout:\\n    exec: \\n      jump: $root.$init\\n    timer: 1000\""
+    },
+    "dialog-box": [
+      {
+        "$": "Скрывает и показывает диалоговое окно",
+        "term": "dialog-box.yaml"
       },
       {
         "jump": "$init"
       }
     ],
-    "label_2_evt__screen": [
+    "discord-log": [
+      "discord-log",
       {
-        "c": "Информация о плагине [ screen ]",
-        "cloud": null,
-        "term": "screens"
+        "jump": "$init"
+      }
+    ],
+    "embed": [
+      "embed",
+      {
+        "jump": "$init"
+      }
+    ],
+    "hands": [
+      {
+        "$": "Выводит в диалоговое окно дополнительный блок со слотами под предметы",
+        "term": "hands.yaml"
       },
       {
         "jump": "$init"
       }
     ],
-    "label_2_evt__show": [
+    "html": [
       {
-        "a": "Привет я Алиса",
-        "center": "Alice",
-        "cloud": false
+        "$": "html chunks",
+        "term": "html.yaml"
       },
       {
-        "a": "А это моя подруга Нора",
-        "right": "Nora"
-      },
-      {
-        "n": "Привет Алиса"
-      },
-      {
-        "left": "Alice",
-        "dialog-box": "clear"
-      },
-      {
-        "right": "Nora"
-      },
-      {
-        "left": "Nora"
-      },
-      {
-        "left": false
-      },
-      {
-        "right": false
-      },
-      {
-        "center": false,
         "jump": "$init"
       }
     ],
-    "label_2_evt__slide": [
+    "jump": [
       {
-        "dialog-box": true,
-        "hands": true,
-        "slide": "yaml2",
-        "$voice": "6m"
+        "$": "Совершает прыжки между сценами ( scene ), и между метками ( label ) внутри сцен",
+        "term": "jump.yaml"
       },
       {
-        "slide": "Screenshot_36",
-        "$voice": "kkkk",
-        "set-data": {
-          "age": "меньше 12"
-        }
-      },
-      {
-        "slide": "components",
-        "$voice": "skk"
-      },
-      {
-        "slide": false,
-        "jump": "$root.$init"
+        "jump": "$init"
       }
     ],
-    "label_2_evt__target": [
+    "menu": [
       {
-        "$": "Там на неведомых дорожках",
+        "$": "внтуриигрового меню",
+        "term": "menu.yaml"
+      },
+      {
+        "jump": "$init"
+      }
+    ],
+    "qa": [
+      "баллы",
+      {
+        "jump": "$init"
+      }
+    ],
+    "scene": [
+      {
+        "$": "Отображает изображение на заднем фоне экрана #stream",
+        "term": "scene_p.yaml"
+      },
+      {
+        "jump": "$init"
+      }
+    ],
+    "screen": [
+      "screen",
+      {
+        "jump": "$init"
+      }
+    ],
+    "slide": [
+      {
+        "$": "slide",
+        "term": "slide.yaml"
+      },
+      {
+        "jump": "$init"
+      }
+    ],
+    "status-bar": [
+      "status bar",
+      {
+        "jump": "$init"
+      }
+    ],
+    "target": [
+      {
+        "term": "target.yaml",
+        "next": true
+      },
+      "Плагин [ target ] делает прыжок внутри текущей главы/метки в помеченное место (якорь)",
+      "Которое маркируется ключевым словом [ _test ] с символом нижнего подчёркивания в начале",
+      {
+        "ex": "Сейчас будет выполнен код"
+      },
+      {
+        "a": "Там на неведомых дорожках"
+      },
+      {
         "target": "_mark1"
       },
       {
-        "$": "Следы невиданных зверей;",
+        "s": "Следы невиданных зверей;",
         "_mark2": true
       },
-      "Избушка там на курьих ножках",
-      "Стоит без окон, без дверей;",
       {
-        "$": "Там лес и дол видений полны;",
+        "s": "Избушка там на курьих ножках"
+      },
+      {
+        "s": "Стоит без окон, без дверей;"
+      },
+      {
+        "s": "Там лес и дол видений полны;"
+      },
+      {
         "jump": "$init"
       },
       {
-        "$": "Там о заре прихлынут волны",
+        "a": "Там о заре прихлынут волны",
         "_mark1": true
       },
-      "На брег песчаный и пустой,",
-      "И тридцать витязей прекрасных",
+      {
+        "a": "На брег песчаный и пустой,"
+      },
+      {
+        "a": "И тридцать витязей прекрасных"
+      },
       {
         "target": "_mark2"
-      },
-      {
-        "menu": {
-          "_test111+-": "Test Больше 12",
-          "_возврастМеньше12": "До 12",
-          "_начало": "В начало"
-        }
       }
     ],
-    "label_2_evt__term": [
+    "term": [
       {
-        "c": "Информация о плагине [ term ]",
-        "cloud": null,
-        "term": "fs_1.txt"
+        "$": "Компонент для вывода кода с подсведкой синтаксиса",
+        "term": "term.yaml"
       },
       {
-        "c": "Кусок кода на python",
-        "term": "lesson_1.py"
-      },
-      {
-        "a": "Немного кода на Lua",
-        "term": "lesson_1.lua"
-      },
-      {
-        "n": "Можно так же вывести изображение",
-        "term": "lab"
+        "$": "Файлы с текстом необходимо ложить в папку data  в любой сцене",
+        "term": "term_1.yaml"
       },
       {
         "jump": "$init"
       }
     ],
-    "label_2_evt__timeout": [
+    "timeout": [
       {
-        "a": "На следующем объекте диалоговое окно, на секунду скроется"
-      },
-      {
-        "dialog-box": false,
-        "hands": false,
-        "timeout": {
-          "exec": {
-            "dialog-box": true,
-            "hands": true
-          },
-          "timer": 1000
-        }
-      },
-      {
-        "a": "Как то так"
+        "$": "Выполняет другие плагины по истечению таймера (в миллисекундах)",
+        "term": "timeout.yaml"
       },
       {
         "jump": "$init"
       }
     ],
-    "label_2_evt__оценка_qa": [
-      {
-        "cloud": false,
-        "qa": "reset",
-        "next": true
-      },
-      {
-        "$": "Выставление оценок",
-        "оценка": {
-          "практика": {
-            "работа_в_команде": 7
-          }
-        }
-      },
-      "происходит таким образом",
-      {
-        "dialog-box": false,
-        "hands": false,
-        "next": true
-      },
-      {
-        "qa": {
-          "c": "Вопрос номер 1",
-          "Пункт меню 1": {
-            "общение": {
-              "лидерство": 77
-            }
-          }
-        }
-      },
-      {
-        "qa": {
-          "a": "К какой части речи не может относится слово \"Привет\"?",
-          "Междометие": {
-            "логика": {
-              "мозговой_штурм": -11
-            },
-            "творчество": {
-              "интуиция": 5
-            },
-            "теория": {
-              "умение_объяснить": 7
-            },
-            "общение": {
-              "кругозор": 99
-            }
-          },
-          "Существительное": {
-            "логика": {
-              "мозговой_штурм": -2
-            },
-            "творчество": {
-              "интуиция": 4
-            },
-            "теория": {
-              "умение_объяснить": 7
-            }
-          },
-          "Частица": {
-            "логика": {
-              "мозговой_штурм": -2
-            },
-            "творчество": {
-              "интуиция": 1
-            },
-            "прилежание": {
-              "самоорганизация": 1
-            },
-            "общение": {
-              "кругозор": 5
-            }
-          }
-        }
-      },
-      {
-        "qa": {
-          "n": "Какой норматив не сдается в школе?",
-          "Прыжки в длину": {
-            "логика": {
-              "мозговой_штурм": 100
-            },
-            "творчество": {
-              "интуиция": 5
-            },
-            "теория": {
-              "умение_объяснить": 7
-            }
-          },
-          "Отжимания": {
-            "логика": {
-              "мозговой_штурм": -2
-            },
-            "творчество": {
-              "интуиция": 4
-            },
-            "теория": {
-              "умение_объяснить": 7
-            }
-          },
-          "Бег с препятствиями": {
-            "логика": {
-              "мозговой_штурм": -2
-            },
-            "творчество": {
-              "интуиция": 1
-            },
-            "прилежание": {
-              "самоорганизация": 1
-            }
-          },
-          "Метание мяча": {
-            "логика": {
-              "мозговой_штурм": -2
-            },
-            "творчество": {
-              "интуиция": 10
-            },
-            "прилежание": {
-              "самоорганизация": 1
-            }
-          }
-        }
-      },
-      {
-        "qa": {
-          "$": "Что произойдет, если смешать сульфат меди и гидроксид натрия?",
-          "Жидкость приобретает зеленый цвет": {
-            "творчество": {
-              "интуиция": 4,
-              "оригинальность": 2
-            },
-            "эмоции": {
-              "понимание_эмоций": 1,
-              "управление_эмоциями": 2
-            },
-            "логика": {
-              "мозговой_штурм": 400
-            }
-          },
-          "Произойдет выделение газа": {
-            "общение": {
-              "кругозор": 3,
-              "лидерство": 1
-            }
-          },
-          "Выпадет осадок синего цвета": {
-            "теория": {
-              "понимание": 3
-            }
-          },
-          "Никакой реакции не произойдет": {
-            "теория": {
-              "понимание": -1
-            }
-          }
-        }
-      },
-      {
-        "jump": "$root.$init"
-      }
-    ],
-    "plug": [
-      {
-        "c": "Каждое ключевое слово верхнего уровня является плагином",
-        "scene": "library",
-        "cloud": {
-          "tags": {
-            "label_2_evt__embed": "embed",
-            "label_2_evt__slide": "slide",
-            "label_2_evt__audio": "audio",
-            "label_2_evt__jump": "jump",
-            "label_2_evt__cloud": "cloud",
-            "label_2_evt__next": "next",
-            "label_2_evt__dialog-box": "dialog-box",
-            "label_2_evt__inv": "inv",
-            "label_2_evt__term": "term",
-            "label_2_evt__animate": "animate",
-            "label_2_evt__screen": "screen",
-            "label_2_evt__hand": "hands",
-            "label_2_evt__scene": "scene",
-            "label_2_evt__show": "show",
-            "label_2_evt__load-scene": "load-scene",
-            "label_2_evt__оценка_qa": "оценка / qa",
-            "label_2_evt__timeout": "timeout",
-            "label_2_evt__target": "target"
-          }
-        }
-      },
-      {
-        "dialog-box": "clear"
-      }
-    ],
-    "yaml-scripts": [
-      {
-        "term": "yaml2",
-        "dialog-box": true,
-        "a": "Обратите внимание на то, что бы имена asset'ов не повторялись"
-      },
-      {
-        "a": "Asset'ы можно ложить в любую сцену. Они будут доступны везде. Поэтому необходимо"
-      },
-      {
-        "a": "давать им уникальные имена"
-      },
-      {
-        "a": "Несмотря на то, что сборщик указывает на ошибки синтаксиса.",
-        "term": "yaml3"
-      },
-      {
-        "a": "Рекомендую установить плагин <i class=\"orange\">yaml lint</i> для своего редактора кода"
-      },
-      {
-        "a": "Он будет сразу подсвечивать ошибки синтаксиса"
-      },
-      {
-        "n": "Если таковые будут иметься"
-      },
-      {
-        "a": "Да. Именно так как говорит Нора"
-      },
-      "Так же подобные плагины обычно требуют настройки строгости проверки синтаксиса.",
-      {
-        "c": "Потому что они будут подсвечивать много лишних ошибок. Например длина есть ограничения по длине строки"
-      },
-      {
-        "a": "Или то, что кусок yaml кода должен начинаться с трех тире ---, а заканчиваться пустой строкой."
-      },
-      {
-        "n": "Или строгость написания комментариев."
-      },
-      "В любом случае, стандарный транслятор сцены в json не обращает внимание на такие мелочи",
-      {
-        "a": "Плагин yamllint будет полезен там, где это действительно нужно. Вроде где автор не поставил пробел в нужном месте или еще какой спец символ"
-      },
+    "voice": [
+      "voice",
       {
         "jump": "$init"
-      }
-    ],
-    "zim-label": [
-      {
-        "zim-intro": true
-      },
-      {
-        "zim-intro": false,
-        "jump": "$root.$init"
       }
     ]
   },
-  "experienced": {
+  "terminal": {
     "assets": [],
     "$init": [
+      {
+        "$": "Если вы когда - нибудь видели фильмы, где присутствовал какой-нибудь хакер, который сидел перед чёрным экраном с зелёными символами",
+        "slide": {
+          "url": "http://app1234.xyz/assets/neo.png"
+        }
+      },
+      {
+        "$": "И что то печатал на клавиатуре, то скорее всего он работал с терминалом"
+      },
+      {
+        "$": "У нас тоже есть терминал, только в нём в больщинстве  символы белые.",
+        "slide": {
+          "url": "http://app1234.xyz/assets/terminal.png"
+        },
+        "warn": "Поменять скриншот"
+      },
+      {
+        "$": "Терминал - это интерфейс, в котором вы можете писать названия программ и они будут запустится."
+      },
+      {
+        "$": "Зайдите в терминал на компьютере который вы запустили в  MineCraft. Кликнув правой кнопкой мыши по монитору"
+      },
+      {
+        "$": "Если система загрузилась, то вам будет предложено в вести  имя пользователя и пароль.",
+        "warn": "имя пользователя и пароль где взять?"
+      },
+      {
+        "$": "Если логин и пароль верны, то мы попадём в папку ( каталог ) текущего пользователя",
+        "term": "t_0.yaml",
+        "slide": false
+      },
+      {
+        "$": "Если ввести команду <i style=\"color: red\">ls</i> <i style=\"color: gold\"> -1a</i>"
+      },
+      {
+        "$": "То мы увидим примерно такую структуру",
+        "term": "t_0_1.yaml"
+      },
+      "Символ  <i style=\"color: red\">-</i> ( тире ) указывает на то какие опции ( параметры ) передать в эту программу. Что бы она понимала на что обратить внимание",
+      "<i style=\"color: red\">audio-player</i> <i style=\"color: gold\">-p=9000</i> Если указывается сокращенная форма записи параметром, то используется одно тире.",
+      "<i style=\"color: red\">audio-player</i> <i style=\"color: gold\">--port=9000</i> Если указывается полная форма записи параметром, то используется два тире.",
+      "<i style=\"color: red\">audio-player</i> <i style=\"color: lightgreen\">./path/to/file.mp3</i> <i style=\"color: gold\">--port=9000</i> Так же некоторым программам необходимо передать путь к файлу, который она может как то использовать",
+      {
+        "$": "Если мы хотим создать папку на своем только что запущеном компе.",
+        "term": "t_2.yaml"
+      },
+      {
+        "$": "Для этого мы вополняем команду <i style=\"color: red\">mkdir</i> ставим пробел и указываем название папки <i style=\"color: gold\">folderName</i>"
+      },
+      {
+        "$": "Файл можно создать командой <i style=\"color: red\">touch</i> ставим пробел и указываем название файла <i style=\"color: gold\">fileName.txt</i>",
+        "term": "t_3.yaml"
+      },
+      {
+        "$": "В одном окне работать не слишком удобно поэтому давайте запустим менежер рабочего пространства <i style=\"color: gold\">tmux</i>",
+        "term": "tmux_0.yaml"
+      },
+      {
+        "$": "Горячиче клавиши для роботы с tmux",
+        "term": "tmux_1.yaml"
+      },
+      {
+        "term": false,
+        "slide": {
+          "url": "http://app1234.xyz/assets/tmux.png"
+        },
+        "$": "Должно получить примерно так"
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "data": {
+      "tmux_0.yaml": "\"Очистить терминал\\n# clear\\nЗапустить tmux\\n# tmux\\n\"",
+      "tmux_1.yaml": "\"Горячие клавиши для работы с программой tmux\\nCTRL + a   Префикс (с него начинаются команды)\\n\\n\\nCtrl+a \\\" — Разделить текущую панель по горизонтали.\\nТак же это можно сделать и командой\\n# tmux split-window -h\\nCtrl+a % — Разделить текущую панель по вертикали.\\n# tmux split-window -v\\nCtrl+a стрелиНаКлавиатуре — переключение между панелями\\nCtrl+x — Закрыть панель\\nHold Ctrl+a, don’t release it and hold one of the arrow keys — resize pane.\\nCtrl+a c — Создать новое окно\\nCtrl+a w — Список всех окон\\nCtrl+a n — Перейти на следующее окно\\nCtrl+a p — Перейти на предыдущее окно\"",
+      "t_0.yaml": "\"Показать список файлов и папок в текущем каталоге\\n# ls\\nСкрытые файлы тоже показывать\\n# ls -1a\\n\"",
+      "t_0_1.yaml": "\".                            \\n..                           \\n.bash_history                \\n.bashrc                      \\n.cache                       \\n.config                      \\n.gnupg                       \\n.local                       \\nlsblk_raw                    \\n.npm                         \\n.profile                     \\nsnap                         \"",
+      "t_1.yaml": "\"Перейти в корневой каталог\\n# cd /\\n\\nПерейти в каталог пользователся\\n# cd ~\\n\\nТекущий каталог\\n# cd .\\n# cd ./\\n\\nПерейти из этой папки на уровень вложенности выше\\n# cd ..\\n# cd ../../../home\"",
+      "t_2.yaml": "\"Создать папку\\n# mkdir folderName\\n\\nУдалить папку\\n# rm -rf filderName\"",
+      "t_3.yaml": "\"# touch fileName.txt\\n\\nТак же можно создать файл и передать в него какой то текст\\n\\n# echo text1 text2>file.txt\\n\\nОтобразить содержимое файла на экране\\n# cat file.txt\"",
+      "t_9999.yaml": "\"Несколько дополнительных команд\\n\\nПерезагрузить компьютер\\n# reboot\""
+    }
+  },
+  "tutorial": {
+    "assets": [],
+    "audio": [
+      {
+        "$": "Что бы воспроизвести аудио необходимо воспользоваться плагинов audio",
+        "term": "audio_0.yaml"
+      },
+      {
+        "ex": "Сейчас будет воспроизведен код"
+      },
+      {
+        "sound": "pianino",
+        "m": "Плагин можно использовать для воспроизведения звуков"
+      },
+      {
+        "a": ". . . . . . . . . . . ."
+      },
+      {
+        "s": ". . . . . . . . . . . . . . . . . . . . ."
+      },
+      {
+        "ex": "Проследите за выполнением кода",
+        "term": "audio_1.yaml"
+      },
+      {
+        "lu": "Воспроизведение аудио",
+        "audio": {
+          "name": "rozario_agro",
+          "action": "play",
+          "loop": true,
+          "volume": 0.5,
+          "speed": 0.5
+        }
+      },
+      {
+        "m": ". . . . . . . . . . . ."
+      },
+      {
+        "s": ". . . . . . . . . . . . . . . . . . . . ."
+      },
+      {
+        "audio": false,
+        "next": true
+      },
+      {
+        "$": "Включить плагин hands",
+        "hands": true
+      },
+      {
+        "$": "Воспроизвести речь",
+        "$voice": "pianino"
+      },
+      ". . . .",
+      ". . . . . . . . . . . .",
+      ". . . . . . . . . . . . . . . . . . . . .",
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "data": [
+      {
+        "$": "set-data",
+        "term": "data_0.yaml"
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "define-chars": [
+      {
+        "$": "Так же нам необходимо зарегестрировать персонажей от чьего имени будет вестись повествование"
+      },
+      {
+        "$": "Регистрация персонажей осуществляется в файле <i style=\"color: red\">./$root/characters.yaml</i>",
+        "term": "chars1.yaml"
+      },
+      {
+        "$": "Сперва необходимо дать индификатор персонажу. При помощи которого мы будем понимать, кто сказал фразу",
+        "term": "chars2.yaml"
+      },
+      "Индификатор <i style=\"color: orange\">$</i> зарезервирован за репликами от имени автора",
+      "id персонажа может содержать сколько угодно символов. Но длинные id не слишком удобно будет часто печатать",
+      {
+        "$": "Имя персонажа будет выводиться над репликой персонажа, что бы было понятно от чьего лица ведется повестование",
+        "term": "chars3.yaml"
+      },
+      {
+        "$": "Цвет имени персонажа. Рекомендую задавать в формате <i style=\"color: orange\">hex</i>",
+        "term": "chars4.yaml"
+      },
+      {
+        "$": "Так как в <i style=\"color: red\">YAML</i> символ <i style=\"color: darkcyan;\">#</i> используется для комментирования кода, то строку с ним, как и с другими спец. символами нужно экранировать ковычками",
+        "term": "chars5.yaml"
+      },
+      {
+        "a": "Реплика от имени Алисы",
+        "term": "chars6.yaml"
+      },
+      {
+        "s": "Реплика от имени Сергея. Так же можно использовать цвета в формате  <i style=\"color: magenta\">rgb</i>",
+        "term": "chars7.yaml"
+      },
+      {
+        "ex": "Так же можно использовать стандарные имена цветов",
+        "term": "chars7_1.yaml"
+      },
+      {
+        "term": "chars8.yaml",
+        "ex": "Сейчас будет выполнен код. Проследите за ходом его выполнения"
+      },
+      {
+        "a": "Там на неведомых дорожках"
+      },
+      {
+        "s": "Следы невиданных зверей;"
+      },
+      {
+        "a": "Избушка там на курьих ножках"
+      },
+      "Стоит без окон, без дверей;",
+      "Строка без индификатора произносится от имени автора",
+      {
+        "s": "Там лес и дол видений полны;"
+      },
+      {
+        "$": "Там о заре прихлынут волны"
+      },
+      {
+        "ex": "Индификатор можнет содержать больше чем один символ"
+      },
+      {
+        "$": "Символ $ зарезервирован за автором в файле characters.yaml"
+      },
+      {
+        "a": "На брег песчаный и пустой,"
+      },
+      "И тридцать витязей прекрасных",
+      "Чредой из вод выходят ясных,",
+      {
+        "s": "И с ними дядька их морской;"
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "dialog": [
+      {
+        "ex": "Сейчас будет выполнен код. Проследите за его выполнением"
+      },
+      {
+        "dialog-box": false,
+        "timeout": {
+          "timer": 1000,
+          "exec": {
+            "dialog-box": true,
+            "next": true
+          }
+        }
+      },
+      {
+        "$": "Что бы отображались реплики, необходимо сначала отобразить диалоговое окно",
+        "term": "reply1.yaml"
+      },
+      {
+        "a": "Там королевич мимоходом"
+      },
+      {
+        "a": "Пленяет грозного царя;"
+      },
+      {
+        "s": "Там в облаках перед народом"
+      },
+      "Через леса, через моря",
+      {
+        "s": "Колдун несёт богатыря;"
+      },
+      "В темнице там царевна тужит,",
+      {
+        "$": "А бурый волк ей верно служит;"
+      },
+      {
+        "a": "В некоторых случаях требуется скрыть диалоговое окно.",
+        "dialog-box": false,
+        "timeout": {
+          "timer": 1000,
+          "exec": {
+            "dialog-box": true
+          }
+        }
+      },
+      {
+        "ex": "Сейчас будет выполнен код. Проследите за его выполнением"
+      },
+      {
+        "$": "Что бы экранировать специальные символы !! %% && '' :: ## заключите строку в ковычки",
+        "term": "reply2.yaml"
+      },
+      {
+        "$": "Реплика внутри объекта"
+      },
+      {
+        "a": "Реплика от другого персонажа"
+      },
+      {
+        "$": "Использование html тегов внутри  <i style=\"color: #d405f0\">реплики</i>"
+      },
+      "1111111",
+      "1111test",
+      "test 1111",
+      {
+        "$": 1111111
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "embed": [
+      {
+        "$": "За подключения сторонних ресурсов отвечает плагин <i class='green'>embed</i>",
+        "term": "embed.yaml"
+      },
+      {
+        "$": "Так же можно подгружать дополнительные сцены со сторонних серверов, посредством плагина load-scene",
+        "key1": true,
+        "term": false
+      },
+      {
+        "$": "Выключать внешние ресурсы необходимо параметром <i style=\"color: skyblue\">false</i>",
+        "key1": false,
+        "term": "embed2.yaml"
+      },
+      {
+        "term": false
+      },
+      {
+        "$": "Можете любой сайте падключить через iframe просто укажие его в src"
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "entry": [
+      {
+        "$": "Сперва необходимо зайти на этой MineCraft server",
+        "slide": {
+          "url": "http://app1234.xyz/assets/server_name.png"
+        }
+      },
+      {
+        "$": "Далее необходимо внутри майнкрафт найти компьтер. Выгладит он примерно так",
+        "slide": {
+          "url": "http://app1234.xyz/assets/linux.png"
+        }
+      },
+      {
+        "$": "Если вы уверены в своих силах, то можете сами собрать себе компьютер из запчастей",
+        "slide": {
+          "url": "http://app1234.xyz/assets/pc.png"
+        }
+      },
+      "Первые две детали компьютера - это системный блок и монитор.",
+      "Монитор он и в Африке монитор, поэтому говорить тут особо не о чем.",
+      "Разве что стоит обратить внимание на то, что монитор должен прилегать одной из своих  стенок к системному блоку",
+      {
+        "$": "Минимальное количество оборудования, которое нам нужно для того, что бы наш системник заработал",
+        "slide": {
+          "url": "http://app1234.xyz/assets/iron.png"
+        },
+        "warn": "По поводу бирок с PORTом тоже необходимо будет прояснить ситуацию"
+      },
+      "Это <i style=\"color: magenta\">планка оперативной памяти</i>, <i style=\"color: orange\">сетевая карта</i> и <i style=\"color: gold\">жёсткий диск</i>",
+      {
+        "$": "Обратите внимание на то, что  <i style=\"darkcyan\">жёсткий диск</i> должен быть с установленой операционной  системой",
+        "warn": "Как его отличить от обычных жёстких дисков я так и не понял. Просто взял диск из ящика возле готового компа."
+      },
+      "А может я просто невнимательно смотрел",
+      "Нажимаем кнопку пуска и закрываем окно интерфейса для взаимодействия с системным блоком и тыкаем на экран.",
+      "Экран показывает нам процесс загрузки операционной системы <i style=\"color: red\">Ubuntu</i>, которая построена на ядре <i style=\"color: cyan\">Linux<i>",
+      "Следует отметить, что операционная система установленная на наш диск не имеет графического интерфейса.",
+      "Поэтому взаимодействовать с ней мы будет через <i style=\"color: orange\">terminal</i>",
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "images": [
+      {
+        "a": "Прежде чем выводить изображения внутри новелы, сперва их надо добавить в проект",
+        "term": "img_0.yaml"
+      },
+      {
+        "a": "Для этого предусмотрена папка <i style=\"color: orange\">assets</i>, которую необходимо разместить внутри сцены"
+      },
+      {
+        "a": "В эту папку необходимо добавить изображения. Так же в этот каталог добавляются и аудио материалы.",
+        "term": "img_1.yaml"
+      },
+      {
+        "a": "Медиа ресурсы из этой папки будут автоматически зарегестрированы и станут доступны внутри новелы."
+      },
+      {
+        "a": "Но для этого надо пересобрать сцены, путем сохранения изменений yaml файлов"
+      },
+      {
+        "a": "Поддерживаемый тип файлов: <i style=\"color: red\">png</i> <i style=\"color: lightgreen\">jpg / jpeg</i> <i style=\"color: orange\">webp</i>  <i style=\"color: yellow\">mp3</i> <i style=\"color: orange\">ogg</i> <i style=\"color: magenta\">waw</i>"
+      },
+      {
+        "a": "Обратите внимание. Имена медиа файлов должны быть <i style=\"color: #16fa48\">уникальными и не содержать пробелов и спец. сиволов</i>"
+      },
+      {
+        "a": "Важно! Что бы вызвать изображение добавленное в папку assets внутри скрипта. Нам понадобится его <i style=\"color: red\">id</i> "
+      },
+      {
+        "a": " Индификатором изображения является его название без расширения <span style=\"font-family: Consolas; color: magenta;\">character__260x450_alice  <s style=\"color: ghostwhite\">.png</s></span>"
+      },
+      {
+        "ex": "Сейчас будет выполнен этот код. Проследите за ходом его выполния.",
+        "term": "img_3.yaml"
+      },
+      {
+        "scene": "lake",
+        "term": false,
+        "s": "На задной фон ставим изображение с озером"
+      },
+      {
+        "m": "А теперь изображение лаборатории",
+        "scene": "lab"
+      },
+      {
+        "a": "Теперь ты можешь увидеть как я выгляжу",
+        "right": "Alice"
+      },
+      {
+        "a": "А теперь я появлилась тут",
+        "left": "Alice",
+        "right": false,
+        "scene": false
+      },
+      {
+        "a": "А это моя подруга Нора",
+        "center": "Nora"
+      },
+      {
+        "$": "Таким вот образом отображается произвольное изображение по центру",
+        "slide": "class-room",
+        "center": false,
+        "left": false
+      },
+      {
+        "ex": "Еще раз ознакомтесь с только что воспроизведенным кодом",
+        "term": "img_3.yaml",
+        "slide": false
+      },
+      {
+        "jump": "$root.$init"
+      },
+      {
+        "$": "Так же необходимо поведать о том как выводятся изображения персонажей",
+        "right": "Alice",
+        "term": false
+      },
+      {
+        "$": "Какие то фризы",
+        "scene": "library"
+      },
+      {
+        "$": "Скрывает изображение",
+        "right": false,
+        "left": "Nora"
+      },
+      {
+        "scene": false,
+        "left": false,
+        "term": "lab"
+      },
+      {
+        "term": false,
+        "slide": "Nora"
+      },
+      {
+        "jump": "$root.$init"
+      }
+    ],
+    "nav": [
       {
         "clear": "all",
         "next": true
       },
       {
-        "scene": "class-room",
-        "dialog-box": true,
-        "status-bar": true,
-        "audio": {
-          "name": "rozario_agro",
-          "action": "play",
-          "speed": 0.3,
-          "volume": 0.3,
-          "loop": true
+        "scene": "lab",
+        "menu": {
+          "$root.$init": ". .",
+          "nav_jump": "jump",
+          "nav_target": "target",
+          "nav_menu": "menu",
+          "nav_main-menu": "main-menu",
+          "nav_content": "content",
+          "onClick": {
+            "dialog-box": true
+          }
+        }
+      }
+    ],
+    "nav_content": [
+      {
+        "content": [
+          {
+            "$root.$init": "Том 1",
+            "disabled": "Глава 1",
+            "tutorial.nav": "Глава 2"
+          },
+          {
+            "$root.$init": "Том 2",
+            "disabled": "Глава 1",
+            "tutorial.nav": "Глава 2"
+          },
+          {
+            "disabled": "Том 3",
+            "$root.$init": "Глава 1",
+            "tutorial.nav": "Глава 2"
+          }
+        ]
+      }
+    ],
+    "nav_jump": [
+      {
+        "$": "Навигация между скриптами осуществляется посредством плагина <i style=\"color: magenta;\">jump</i>",
+        "term": "nav0.yaml"
+      },
+      {
+        "$": "Для того, что бы перейти на другую главу вашей книги, необходимо указывать плагину <i style=\"color: red;\">jump</i> куда хотим отправиться. ",
+        "term": "nav1.yaml"
+      },
+      {
+        "$": "Внутри книги <i style=\"color: gray;\">( scene )</i> перемещение между главами осуществляется посредством указания названия главы <i style=\"color: gray;\">( label )</i> <i style=\"color: magenta;\">без расширения    <s style=\"color: red; font-family: Consolas;\">.yaml</s></i> ",
+        "term": "nav2.yaml"
+      },
+      {
+        "$": "Для осуществелия прыжков между книгами необходимо указывать в какую книгу хотим прыгнуть, а так же конкретную главу внутри этой книги. Формат записи такой <span style=\"font-family: Consolas;\"> <i style=\"color: red;\">sceneName</i><b style=\"color:lightgreen;\">.</b><i style=\"color: orange;\">labelName</i>",
+        "term": "nav3.yaml"
+      },
+      {
+        "$": "Прыжки внутри конкретной метки <span style=\"font-family: Consolas;\"> <i style=\"color: red;\">sceneName</i><b style=\"color:lightgreen;\">.</b><i style=\"color: orange;\">labelName</i><b style=\"color: lightgreen;\">.</b><i style=\"color: magenta;\">index</i></span> можно осуществлять, если указать позицию / индекс внутри скрипта. Индекс начинается с <i style=\"color: darkcyanl\">нуля</i>",
+        "term": "nav4.yaml"
+      },
+      {
+        "jump": "nav"
+      }
+    ],
+    "nav_main-menu": [
+      {
+        "term": "nav_main_menu.yaml",
+        "$": "Главное меню делается так же как и обычное меню",
+        "dialog-box": true
+      },
+      {
+        "$": "только стили у него другие и ключевое слово по которому оно вызывается"
+      },
+      {
+        "scene": {
+          "url": "http://app1234.xyz/assets/earch.jpg"
         },
-        "$": "test 0000000000000"
+        "term": false,
+        "dialog-box": false,
+        "main-menu": {
+          "planets.luna": "Луна",
+          "planets.mars": "Марс",
+          "css": {
+            "transform": "unset",
+            "left": "unset",
+            "right": "50px",
+            "top": "50px",
+            "background": "darkcyan"
+          }
+        }
+      }
+    ],
+    "nav_menu": [
+      {
+        "$": "Внутриигровое меню вызывается по ключевому слову <i style=\"color: magenta;\">menu</i>",
+        "term": "nav7.yaml"
+      },
+      {
+        "$": "Если прыжок осуществляется внути текущей книги / сцены , то не обязательно писать название этой сцены.",
+        "term": "nav8.yaml"
+      },
+      {
+        "$": "Если же переместиться нужно в другую книгу. То нужно указать название другой книги и главу куда хотим прыгнуть",
+        "term": "nav9.yaml"
+      },
+      {
+        "$": "Плагин <i style=\"color: magenta;\">menu</i> , может пользоваться возможностями плагина <i style=\"color: orange;\">target</i> и прыгать по меткам внутри текущей главы",
+        "term": "nav10.yaml"
+      },
+      {
+        "$": "Так же есть возможность заблокировать какой либо пункт меню. Для этого необходимо использовать ключевое слово <i style=\"color: darkcyan;\">dissabled</i>",
+        "term": "nav11.yaml"
+      },
+      "Плагин <i style=\"color: orange;\"> внутри одной \"строки\" / объекта контекста не может именть одинаковых ключевых слов</i>, поэтому к ключевому слову dissabled можно добавить любой префикс.",
+      {
+        "$": "Так же возможно использовать плагин <i style=\"color: magenta;\">next</i> внутри меню. Этот плагин делает прыжок на следующую строку и выполняет её",
+        "term": "nav12.yaml"
+      },
+      "<i style=\"color: magenta;\">next</i> можно использовать независимо от меню. Там где может понадобится возможность без клика пользоватеся, выполнить объект и перескочить туда где пользователь уже может контролировать поведение новеллы",
+      {
+        "ex": "Сейчас будет выполнен код. Проследите за его выполнением",
+        "term": "nav6.yaml"
+      },
+      "Ночь, улица, фонарь, аптека,",
+      "Бессмысленный и тусклый свет.",
+      "Живи еще хоть четверть века —",
+      "Все будет так. Исхода нет.",
+      {
+        "dialog-box": false,
+        "term": false,
+        "scene": {
+          "url": "http://app1234.xyz/assets/earch.jpg"
+        },
+        "menu": {
+          "planets.luna": "Отправиться на Луну",
+          "planets.mars": "Лучше на Марс"
+        }
+      }
+    ],
+    "nav_target": [
+      {
+        "$": "Так же можно пометить какую-нибудь строку свойством начинающимся со знака <i style=\"color: magenta;\">_</i> нижего подёркивания  <i style=\"color: darkcyan;\">_example1: true</i>",
+        "term": "nav5.yaml"
+      },
+      {
+        "$": "Тогда можно будет совершить прыжок при помощи ключевого слова <i style=\"color: orange;\">target</i>"
+      },
+      {
+        "ex": "Сейчас будет выполнен код. Проследите за его выполнением"
+      },
+      {
+        "scene": {
+          "url": "http://app1234.xyz/assets/earch.jpg"
+        },
+        "next": true
+      },
+      ". . . .",
+      ". . . . . . . . . .",
+      {
+        "jump": "chunks.target"
+      }
+    ],
+    "scenesAndLabels": [
+      {
+        "$": "Итак, мы добрались до каталога <i style=\"color: red\">./src/scenes</i>"
+      },
+      {
+        "$": " Давайте представим, что папка <i style=\"color: red\">./src/scenes</i> является своеобразной книжной полкой",
+        "term": "library"
+      },
+      {
+        "$": "В которой размещено несколько книг.",
+        "term": "scenes1.yaml"
+      },
+      {
+        "$": "По своей структуре книга делится на главы."
+      },
+      {
+        "$": "Каждая книга может содержать несколько глав.",
+        "term": "scenes2.yaml"
+      },
+      "Можно сказать, что книга - это папка для глав",
+      {
+        "$": "В данный момент внутри папки <i style=\"color: red\">./src/scenes</i> существует пока только одна папка <i style=\"color: magenta\">$root</i> и есть одна глава   <i style=\"color: orange\">$init</i>",
+        "term": "scenes3.yaml"
+      },
+      "Говоря грубо, это и есть наша первая книга. Внутри которой размещаются главы.",
+      {
+        "$": "Разумеется глав можно добавлять сколько угодно, как и книг.",
+        "term": "scenes31.yaml"
+      },
+      "Главу <i style=\"color: purple;\">$root/$init.yaml</i> удалять не рекомендуется. Так как она является точкой входа в приложение",
+      {
+        "$": "В данный момент у нас есть одна глава   <i style=\"color: orange\">$init</i>,  если мы её откроем, то мы увидим структуру изображенную в проекторе",
+        "term": "scenes4.yaml"
+      },
+      "Собственно внутри глав находятся <i style=\"color: red\">YAML</i> скрипты. В которые записываются комады для выполнения",
+      {
+        "$": "Глава - является массивом данных. Каждый отдельный элемент этого массива разделяется символом <i style=\"color: darkcyan;\">-</i> тире"
+      },
+      "Элемент массива может являтся либо <i style=\"color: orange;\">строкой</i> либо <i style=\"color: darkcyan;\">объектом</i>",
+      "Кликая мышкой по диалоговому окну, мы можем перемещаться по этому массиву только вперёд.",
+      "<i style=\"color: orange;\">Строка</i> или <i style=\"color: darkcyan;\">объект</i> отображаемый в текущим момент времени называется объектом контекста",
+      {
+        "ex": "Сейчас будет выполнен код. Проследите за его ходом выполнения"
       },
       {
         "dialog-box": false,
-        "hands": false,
-        "next": true
-      },
-      {
-        "menu": {
-          "how-write-plugin": "Как написать плагин",
-          "next": "API",
-          "disabled": "---",
-          "$root.$init": "Вернуться в начало"
+        "timeout": {
+          "timer": 1000,
+          "exec": {
+            "dialog-box": true,
+            "next": true
+          }
         }
       },
+      "У лукоморья дуб зелёный;",
+      "Златая цепь на дубе том",
+      "И днём и ночью кот учёный",
+      "Всё ходит по цепи кругом;",
+      "Идёт направо — песнь заводит,",
+      "Налево — сказку говорит.",
+      "Там чудеса там леший бродит,",
+      "Русалка на ветвях сидит;",
       {
-        "n": "vnjson.js",
-        "dialog-box": true,
-        "right": "Nora"
+        "$": "Позиция внутри массива начинается с <i style=\"color: magenta;\">нуля 0</i>",
+        "term": false
       },
       {
-        "n": "test 2",
-        "term": "api.js"
+        "ex": "Сейчас будет выполнен код. Проследите за его ходом выполнения"
       },
       {
-        "n": "test 33333",
-        "right": false
+        "$": "test 0",
+        "term": "nav4_0.yaml"
+      },
+      {
+        "$": "test 1",
+        "term": "nav4_1.yaml"
+      },
+      {
+        "$": "test 2",
+        "term": "nav4_2.yaml"
+      },
+      {
+        "$": "test 3",
+        "term": "nav4_3.yaml"
+      },
+      {
+        "$": "test 4",
+        "term": "nav4_4.yaml"
+      },
+      {
+        "$": "test 5",
+        "term": "nav4_5.yaml"
+      },
+      {
+        "$": "Так же желательно создать в корне файл <i style=\"color: red;\">package.yaml</i> где указать дополнительную информацию",
+        "term": "scenes5.yaml"
+      },
+      {
+        "$": "В параметре <i style=\"color: gold;\">name</i> указывается название вашего проекта"
+      },
+      {
+        "$": "Параметр <i style=\"color: lightgreen;\">debug</i> отображает дополнительные панели, для помощи при работе с движком"
       },
       {
         "jump": "$root.$init"
       }
     ],
-    "how-write-plugin": [
+    "setup": [
       {
-        "a": "Внутри папки <i class=\"cyan\">[ plugins ]</i> находятся файлы плагинов.",
-        "right": "Alice",
-        "dialog-box": true,
-        "term": "Screenshot_42"
+        "$": "Что бы начать работать с движком <i style=\"color:darkcyan;\">mcvnjson</i> необходимо сперва запустить терминал и выполнить команду приведённую на экране",
+        "term": "setup1.yaml"
+      },
+      "Которая загрузит шаблон для вашего учебного пособия",
+      {
+        "$": "Откройте ваш проект, там где распологается его корень. А он располагается там где расположен файл <i style=\"color: red; font-femaly: Consolas;\">package.json</i>",
+        "term": "setup2.yaml"
       },
       {
-        "a": "Точка входа в плагин регистрируется в файле <i class=\"red\">./src/plugins.js</i>",
-        "term": "Screenshot_43"
+        "$": "Далее необходимо установить зависимости. При помощи менеджера модулей <i style=\"color: brown\">npm</i>, который уже предустановлен в вашей системе",
+        "term": "setup3.yaml"
       },
       {
-        "switch": {
-          "name===Сергей": {
-            "jump": "$root.$init"
-          }
+        "$": "После чего нужно произвести запуск сборки поекта, делается это в терминале командой <i style=\"color: red\">npm run dev</i>",
+        "term": "setup4.yaml"
+      },
+      {
+        "$": "Запусится локальный сервер  по адресу <i style=\"color: red;\">http://localhost:9000</i>"
+      },
+      {
+        "$": "Далее необходимо сконструировать экран из  блоков <i style=\"color: magenta\">Web Displays</i> или найти уже готовый",
+        "term": false,
+        "slide": {
+          "url": "http://app1234.xyz/assets/WebDisplays.png"
         }
       },
       {
-        "a": "Таким вот образом",
-        "term": "Screenshot_44"
+        "$": "И открыть в нём адреc на котором запустился наш проект  <i style=\"color: red;\">http://localhost:9000</i>",
+        "slide": {
+          "url": "http://app1234.xyz/assets/build.png"
+        }
+      },
+      "После каждого сохранения, проект будет автоматически пересобираться.",
+      {
+        "$": "Внутри проекта необходимо открыть папку <i style='color: pink'>./src/scenes</i>",
+        "term": "setup5.yaml",
+        "slide": false
       },
       {
-        "a": "Внутри файла <i class=\"red\">./plugins/plugDir/index.js</i> подключаются файлы шаблона.",
-        "term": "Screenshot_45"
+        "$": "Это и есть наш рабочий каталог. Где будет происходить 99% работы.",
+        "term": "setup6.yaml"
       },
       {
-        "a": "Експортируется функция. Внутри которой висит слушатель события. [ point ]"
+        "jump": "$root.$init"
+      }
+    ],
+    "zim": [
+      {
+        "zim-intro": true
       },
       {
-        "a": "Это событие будет вызываться из пользовательского скрипта. И называться как угодно, только не должно совподать с ранее зарегестрированными плагинами"
+        "zim-ui": true
       },
       {
-        "right": false,
-        "left": "Nora",
-        "n": "Список пользовательских скриптов можно увидеть если в консоле браузера (F12) написать команду <i class=\"red\">vnjs.plugins</i>"
+        "$": "zim - код подключается как независимый плагин",
+        "term": "zim_0.yaml",
+        "zim-ui": false
       },
       {
-        "n": "Так же потребуется базовые знания <i class=\"green\">javascript, jQuery, css, html</i>."
+        "$": "Откройте папку plugins, скорипурей папку zim-intro и переименуйте. Разместите здесь же в каталоге plugins"
       },
+      "Библиотеки  <i style=\"color: orange\">create.js</i> и <i style=\"color: gold\"zim.js</i>  уже подключены",
+      {
+        "$": "Теперь нам необходимо подключить только что созданый плагин",
+        "term": "zim_0.js"
+      },
+      {
+        "$": "Внутри нового плагина откройте файл <i style=\"color: lightgreen;\">zim.js </i>",
+        "term": "zim_1.js"
+      },
+      {
+        "$": "В переменную <i style=\"color: magenta\">event</i> записывается ключ по которому мы будет вызывать из <i style=\"color: red\">YAML</i> скрипта наш плагин"
+      },
+      "Обратите внимание что <i style=\"color: brown;\">window</i><i style=\"color: darkcyan\">.</i><i style=\"color: orange\">frame</i> записывается как свойство обхекта window",
       {
         "jump": "$root.$init"
       }

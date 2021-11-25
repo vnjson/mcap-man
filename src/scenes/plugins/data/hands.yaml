@@ -1,0 +1,6 @@
+- hands: true
+
+- hand-left: imageName1
+- hand-right: imageName2
+
+- hands: false

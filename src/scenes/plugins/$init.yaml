@@ -1,0 +1,31 @@
+- clear: all
+  next: true
+- menu:
+    $root.$init: . .
+    jump: jump - Прыжок между сценами и метками 
+    $next: next - Переход на следующий объект скрипта
+    target: target - Прыжок по якорям внутри label 
+    timeout: timeout - Вызывает другие плагины по истечению времени
+    dialog-box: dialog-box - Диалоговое окно
+    scene: scene - Отоброжение заднего фона внутри экрана
+    menu: menu - Внутриигровое меню
+    clear: clear - Скрывает все компоненты и отключает аудио
+    audio: audio - Воспроизведение аудио
+    center-left-right: center, left, right - Отображает персонажей на экране
+    slide: slide - Отображает изображение по центру экрана
+    term: term - Выводит код с подсведкой синтаксиса
+    hands: hands - В диалоговом окне два слота (руки)
+    screen: screen -	Переключение экранов
+    embed: embed - Подключение сторонних ресурсов через iFrame
+    html: html - Вывод на экран кусков html кода
+    content: content
+    animate: animate - Добавление анимации к элементам
+    disabled_19: inv - Инвентарь
+    qa: qa - баллы
+    voice: voice
+    status-bar: status-bar
+    discord-log: discord-log
+    onClick:
+      dialog-box: true
+
+  # main-menu

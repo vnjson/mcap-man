@@ -1,19 +1,20 @@
 - clear: all
   next: true
 
-- main-menu:
-    beginning.$init: Начинающий
-    experienced.$init: Опытный
-    disabled_item: Продвинутый
-    css:
-      width: 300px
-      top: 50px
-      transform: unset # убираем смещение центра
-      left: unset
+- scene: class-room
+  menu:
+    tutorial.entry: Начало работы
+    terminal.$init: Знакомство с терминалом
+    tutorial.setup: Установка шаблона
+    tutorial.scenesAndLabels: Сцены и метки
+    tutorial.define-chars: Объявление персонажей
+    tutorial.dialog: Написание диалогов
+    tutorial.nav: Навигация по скрипту
+    tutorial.images: Работа с изображениями
+    tutorial.audio: Воспроизведение аудио
+    tutorial.embed: Подключение внешних ресурсов
+    tutorial.data: Работа с данными
+    tutorial.zim: Подключение ZIMjs
+    plugins.$init: Плагины
     onClick:
       dialog-box: true
-      hands: true
-
-      # right: 0 Применится если убрать значение left: unset
-  scene: lab
-

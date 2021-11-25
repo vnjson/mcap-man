@@ -1,0 +1,16 @@
+./book_2/$init.yaml
+- $: Прыгаем в третью книгу в главу test_0
+- jump: book_3.test_0
+###########################
+├───$root
+│   ├───characters.yaml
+│   ├───$init.yaml
+│   ├───chapter1.yaml
+│   ├───chapter2.yaml
+│   └───chapter3.yaml
+├───book_2
+│   ├───$init.yaml
+│   └───chap1.yaml
+└───book_3
+    ├───$init.yaml
+    └───test_0.yaml

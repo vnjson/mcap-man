@@ -1,0 +1,27 @@
+
+- $: 'Что бы начать работать с движком <i style="color:darkcyan;">mcvnjson</i> необходимо сперва запустить терминал и выполнить команду приведённую на экране'
+  term: setup1.yaml
+- Которая загрузит шаблон для вашего учебного пособия
+- $: 'Откройте ваш проект, там где распологается его корень. А он располагается там где расположен файл <i style="color: red; font-femaly: Consolas;">package.json</i>'
+  term: setup2.yaml
+- $: 'Далее необходимо установить зависимости. При помощи менеджера модулей <i style="color: brown">npm</i>, который уже предустановлен в вашей системе'
+  term: setup3.yaml
+- $: 'После чего нужно произвести запуск сборки поекта, делается это в терминале командой <i style="color: red">npm run dev</i>'
+  term: setup4.yaml
+- $: 'Запусится локальный сервер  по адресу <i style="color: red;">http://localhost:9000</i>'
+
+- $: 'Далее необходимо сконструировать экран из  блоков <i style="color: magenta">Web Displays</i> или найти уже готовый'
+  term: false
+  slide:
+    url: http://app1234.xyz/assets/WebDisplays.png 
+- $: 'И открыть в нём адреc на котором запустился наш проект  <i style="color: red;">http://localhost:9000</i>'
+  slide:
+    url: http://app1234.xyz/assets/build.png 
+
+- После каждого сохранения, проект будет автоматически пересобираться.
+- $: "Внутри проекта необходимо открыть папку <i style='color: pink'>./src/scenes</i>"
+  term: setup5.yaml
+  slide: false
+- $: Это и есть наш рабочий каталог. Где будет происходить 99% работы.
+  term: setup6.yaml
+- jump: $root.$init

@@ -1,0 +1,13 @@
+/scenes/
+├───$root
+│   ├───$init.yaml
+│   ├───chapter1.yaml
+│   └───chapter2.yaml
+├───scene1
+│   ├───$init.yaml
+│   ├───chapter1.yaml
+│   └───chapter2.yaml
+└───scene2
+    ├───$init.yaml
+    ├───chapter1.yaml
+    └───chapter2.yaml

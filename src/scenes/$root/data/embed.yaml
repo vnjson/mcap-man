@@ -1,0 +1,3 @@
+# ./src/scenes/$root/embed.yaml
+key1: <iframe width="100%" height="570px" src="https://..."></iframe>
+key2:  <iframe width="100%" height="570px" src="https://..."></iframe>

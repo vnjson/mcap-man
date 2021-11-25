@@ -1,0 +1,4 @@
+/$root
+├───$init.yaml
+├───package.yaml
+└───characters.yaml

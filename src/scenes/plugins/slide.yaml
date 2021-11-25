@@ -1,0 +1,4 @@
+
+- $: slide
+  term: slide.yaml 
+- jump: $init

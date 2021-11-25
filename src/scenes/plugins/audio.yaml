@@ -1,0 +1,5 @@
+
+- $:  Воспроизводит звук
+  term: audio.yaml
+ 
+- jump: $init

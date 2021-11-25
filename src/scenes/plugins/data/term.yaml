@@ -1,0 +1,9 @@
+- term: lesson_1.py #planeText[extname]
+
+- term: lesson_1.lua  
+
+- term: imageName # выводит изображение в компоненте терминала
+
+- term: false # скрыть терминал
+
+- term: clear # очистить терминал

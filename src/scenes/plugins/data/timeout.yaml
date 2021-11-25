@@ -1,0 +1,4 @@
+- timeout:
+    exec: 
+      jump: $root.$init
+    timer: 1000

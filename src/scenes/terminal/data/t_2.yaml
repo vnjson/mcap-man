@@ -1,0 +1,5 @@
+Создать папку
+# mkdir folderName
+
+Удалить папку
+# rm -rf filderName

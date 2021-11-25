@@ -1,0 +1,6 @@
+/scenes
+└───$root
+    ├───assets
+    ├───$init.yaml
+    ├───package.yaml
+    └───characters.yaml

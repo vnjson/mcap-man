@@ -1,0 +1,4 @@
+/src/plugins
+├───zim-intro
+│   ├───index.js
+│   └───zim.js

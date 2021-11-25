@@ -1,0 +1,14 @@
+- id: $
+  name: . . . .
+  nameColor: '#49de58'
+  replyColor: '#b2d5f5'
+
+- id: a
+  name: Алиса
+  nameColor: '#bb38c7'
+  replyColor: '#cb86d1'
+
+- id: s
+  name: Сергей
+  nameColor: rgb( 120, 33, 170 )
+  replyColor: '#11bef2'

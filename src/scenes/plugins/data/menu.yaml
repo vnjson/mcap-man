@@ -1,0 +1,78 @@
+- menu:
+    luna: Отправиться на Луну
+    mars: Лучше на Марс 
+    next: Пожалуй останусь на Земле #Можно внутри можно использовать [ next ]
+
+#next
+- Земля
+
+### ### ##
+- menu:
+    $: Куда бы мне отправить #Вопрос от автора
+    luna: Отправиться на Луну
+    mars: Лучше на Марс 
+### ### ##
+- menu:
+    a: Куда бы мне отправить #Вопрос от Алисы
+    luna: Отправиться на Луну
+    mars: Лучше на Марс 
+### ### ##
+- menu:
+    a: Куда бы мне отправить #Вопрос от Алисы
+    luna: Отправиться на Луну
+    disabled: Лучше на Марс #Не активный пункт меню
+    disabled_23: Еще один заблокированный пункт
+    next: Дальше
+#Что бы заблокировать пункт меню используется ключевое слово [ disable ]
+#Но так как заблокировавнных пунктов может быть несколько, а ключи внутри объекта
+#не могут повторяться, то к ключевому слову пожно прибавить какой-нибудь префикс disabled_24
+
+- $: Пример с маркировкой
+  _mark1: true
+
+- menu:
+    luna: Отправиться на Луну
+    mars: Лучше на Марс 
+    _mark1: В начало
+    onClick:
+      dialog-box: true
+      scene: background
+
+# onClick - Ключевое слово. Принимает объект для выполнения this.exec({ctx})
+- menu:
+    _mark1: В начало
+    disabled: Общая концепция
+    $root.$init: Отправиться в начало
+    next: Список плагинов
+
+
+- menu:
+    zim-label: Как подключить zim
+    label_1_tree__fs: Файловая структура
+    yaml-scripts: YAML скрипты
+    plug: Список плагинов
+    disabled: ---
+    $root.$init: Вернуться в начало
+    onClick:
+      hands: true
+      dialog-box: true
+
+# onClick - execute the code after the jump
+# 
+# 
+- menu:
+    zim-label: Как подключить zim
+    label_1_tree__fs: Файловая структура
+    yaml-scripts: YAML скрипты
+    plug: Список плагинов
+    disabled: ---
+    $root.$init: Вернуться в начало
+    onClick:
+      hands: true
+      dialog-box: true
+    css:
+      transform: unset
+      left: unset
+      width: 300px
+      top: 50px
+      right: 20px

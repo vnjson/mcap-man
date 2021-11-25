@@ -1,0 +1,30 @@
+- scene:
+    url: http://app1234.xyz/assets/ship.png
+  timeout:
+    timer: 2000
+    exec:
+      next: true
+  
+- scene:
+    url: http://app1234.xyz/assets/luna.webp
+  timeout:
+    timer: 2000
+    exec:
+      next: true
+- dialog-box: true
+  lu: Привет человек
+  slide:
+    url: http://app1234.xyz/assets/lunyanin.png
+  scene: false
+  #term: nav6_1.yaml
+
+- lu: Тебе здесь не рады
+- lu: Отправляйся лучше на Марс. Там более рудушно принимают гостей.
+- warn:  Не забываем задокументировать onClick
+  next: true
+
+- warn: Не забываем про main-menu
+  next: true
+- warn: Не забываем и про плагин content
+  next: true
+- jump: mars

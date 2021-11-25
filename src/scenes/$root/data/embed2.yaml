@@ -1,0 +1,9 @@
+- key1: true
+  $: Показ внешнего ресурся
+
+- key2: true
+  key1: false #скрыть
+  $: Показ второго внешнего ресурся
+
+- key2: false
+  jump: $root.$init

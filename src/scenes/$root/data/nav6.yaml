@@ -1,0 +1,18 @@
+- Ночь, улица, фонарь, аптека,
+- Бессмысленный и тусклый свет.
+- Живи еще хоть четверть века —
+- Все будет так. Исхода нет.
+- dialog-box: false
+  scene:
+    url: http://app1234.xyz/assets/earch.jpg
+  menu:
+    planets.luna: Отправиться на Луну
+    planets.mars: Лучше на Марс 
+
+#########
+/scenes
+├───$root
+│   └───$init.yaml
+├───planets
+│   ├───luna.yaml 
+│   ├───mars.yaml 

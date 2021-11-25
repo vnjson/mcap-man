@@ -1,0 +1,6 @@
+# ./src/scenes/planets/luna.yaml
+- dialog-box: true
+  lu: Привет человек
+- lu: Тебе здесь не рады
+- lu: Возвращайся к своим, на Марс
+- jump: mars

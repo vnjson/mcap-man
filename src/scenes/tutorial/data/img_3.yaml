@@ -1,0 +1,18 @@
+- scene: background_1024x768_lake
+  s: На задной фон ставим изображение с озером
+- m: А теперь изображение лаборатории
+  scene: background_1024x768_lab
+- a: Теперь ты можешь увидеть как я выгляжу
+  right: character_260x450_alice
+- a: А теперь я появлилась тут
+  left: character_260x450_alice
+  right: false
+  scene: false
+- a: А это моя подруга Нора
+  center: character_260x450_nora
+- $: Таким вот образом отображается произвольное изображение по центру
+  slide: slide_XXXxXXX_0
+  center: false
+  left: false
+- jump: $root.$init
+  slide: false

@@ -1,0 +1,13 @@
+/scenes/
+├───book_1
+│   ├───chapter_1
+│   ├───chapter_2
+│   └───chapter_3
+├───book_2
+│   ├───chapter_1
+│   ├───chapter_2
+│   └───chapter_3
+└───book_3
+    ├───chapter_1
+    ├───chapter_2
+    └───chapter_3

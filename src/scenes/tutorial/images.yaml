@@ -1,0 +1,62 @@
+- a: Прежде чем выводить изображения внутри новелы, сперва их надо добавить в проект
+  term: img_0.yaml
+- a: 'Для этого предусмотрена папка <i style="color: orange">assets</i>, которую необходимо разместить внутри сцены'
+- a: В эту папку необходимо добавить изображения. Так же в этот каталог добавляются и аудио материалы.
+  term: img_1.yaml
+- a: Медиа ресурсы из этой папки будут автоматически зарегестрированы и станут доступны внутри новелы. 
+- a: Но для этого надо пересобрать сцены, путем сохранения изменений yaml файлов
+- a: 'Поддерживаемый тип файлов: <i style="color: red">png</i> <i style="color: lightgreen">jpg / jpeg</i> <i style="color: orange">webp</i>  <i style="color: yellow">mp3</i> <i style="color: orange">ogg</i> <i style="color: magenta">waw</i>'
+- a: 'Обратите внимание. Имена медиа файлов должны быть <i style="color: #16fa48">уникальными и не содержать пробелов и спец. сиволов</i>'
+- a: 'Важно! Что бы вызвать изображение добавленное в папку assets внутри скрипта. Нам понадобится его <i style="color: red">id</i> '
+- a: ' Индификатором изображения является его название без расширения <span style="font-family: Consolas; color: magenta;">character__260x450_alice  <s style="color: ghostwhite">.png</s></span>'
+
+- ex: Сейчас будет выполнен этот код. Проследите за ходом его выполния.
+  term: img_3.yaml
+
+- scene: lake
+  term: false
+  s: На задной фон ставим изображение с озером
+- m: А теперь изображение лаборатории
+  scene: lab
+- a: Теперь ты можешь увидеть как я выгляжу
+  right: Alice
+- a: А теперь я появлилась тут
+  left: Alice
+  right: false
+  scene: false
+- a: А это моя подруга Нора
+  center: Nora
+- $: Таким вот образом отображается произвольное изображение по центру
+  slide: class-room
+  center: false
+  left: false
+- ex: Еще раз ознакомтесь с только что воспроизведенным кодом
+  term: img_3.yaml
+  slide: false
+- jump: $root.$init
+
+
+#- scene: lab
+# term: images.yaml
+#- За вывод изображений отвеает несколько плагинов. А именно [ scene, left,right,center, slide, term ]
+
+#- a: 'За отображение заднего фона отвечает плагин <i style="color: orange">scene</i>'
+#  scene: lake
+
+- $: Так же необходимо поведать о том как выводятся изображения персонажей
+  right: Alice
+  term: false
+- $: Какие то фризы
+  scene: library
+
+- $: Скрывает изображение
+  right: false
+  left: Nora
+- scene: false
+  left: false
+  term: lab
+
+- term: false
+  slide: Nora
+
+- jump: $root.$init

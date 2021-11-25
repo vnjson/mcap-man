@@ -1,0 +1,10 @@
+./$root/$init.yaml
+- $: Прыгаем в первую главу книги $root
+- jump: chapter3 
+###########################
+└───$root
+    ├───characters.yaml
+    ├───$init.yaml
+    ├───chapter1.yaml
+    ├───chapter2.yaml
+    └───chapter3.yaml

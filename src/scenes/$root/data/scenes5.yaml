@@ -1,0 +1,8 @@
+/scenes
+└───$root
+    ├───$init.yaml
+    └───package.yaml
+
+# package.yaml
+name: Название
+debug: true  #false  

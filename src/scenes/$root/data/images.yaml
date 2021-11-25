@@ -1,0 +1,18 @@
+
+- scene: imagename
+- scene: false
+
+- slide: imagename
+- slide: false
+
+- center: imagename1
+- left: imagename2
+- right: imagename3
+
+- center: false
+- left: false
+- right: false
+
+- term: imagename
+
+- term: false

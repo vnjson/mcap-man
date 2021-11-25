@@ -1,0 +1,4 @@
+
+- $: внтуриигрового меню
+  term: menu.yaml
+- jump: $init

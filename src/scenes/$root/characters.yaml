@@ -1,21 +1,30 @@
----
-- id: $
-  name: ". . . ."
-  nameColor: '#49de58'
-  replyColor: '#a4deaa'
 
-- id: c
-  name: Капитан
-  nameColor: '#e0b33f'
-  replyColor: '#f2cd11'
-  logo: capitan
+- id: $
+  name: . . . .
+  nameColor: '#49de58'
+  replyColor: '#b2d5f5'
 
 - id: a
   name: Алиса
   nameColor: '#bb38c7'
   replyColor: '#cb86d1'
 
-- id: n
-  name: Нора
-  nameColor: '#10a7e8'
-  replyColor: '#8acfed'
+- id: ex
+  name: Exec
+  nameColor: red
+  replyColor: brown
+
+- id: s
+  name: Сергей
+  nameColor: rgb(120, 33, 170)
+  replyColor: '#11bef2'
+
+- id: m
+  name: Марсианин
+  nameColor: '#ff660d'
+  replyColor: '#de6118'
+
+- id: lu
+  name: Лунянин
+  nameColor: '#08ffef'
+  replyColor: '#10ded0'

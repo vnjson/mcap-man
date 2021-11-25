@@ -1,0 +1,12 @@
+- $: За подключения сторонних ресурсов отвечает плагин <i class='green'>embed</i>
+  term: embed.yaml
+- $: Так же можно подгружать дополнительные сцены со сторонних серверов, посредством плагина load-scene
+  key1: true
+  term: false
+
+- $: 'Выключать внешние ресурсы необходимо параметром <i style="color: skyblue">false</i>'
+  key1: false
+  term: embed2.yaml
+- term: false
+- $: Можете любой сайте падключить через iframe просто укажие его в src
+- jump: $root.$init

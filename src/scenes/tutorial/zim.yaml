@@ -1,0 +1,19 @@
+- zim-intro: true
+
+- zim-ui: true
+
+- $: zim - код подключается как независимый плагин
+  term: zim_0.yaml
+  zim-ui: false
+- $: Откройте папку plugins, скорипурей папку zim-intro и переименуйте. Разместите здесь же в каталоге plugins 
+- 'Библиотеки  <i style="color: orange">create.js</i> и <i style="color: gold"zim.js</i>  уже подключены'
+
+- $: Теперь нам необходимо подключить только что созданый плагин
+  term: zim_0.js
+- $: 'Внутри нового плагина откройте файл <i style="color: lightgreen;">zim.js </i>'
+  term: zim_1.js
+
+- $: 'В переменную <i style="color: magenta">event</i> записывается ключ по которому мы будет вызывать из <i style="color: red">YAML</i> скрипта наш плагин'
+- 'Обратите внимание что <i style="color: brown;">window</i><i style="color: darkcyan">.</i><i style="color: orange">frame</i> записывается как свойство обхекта window'
+
+- jump: $root.$init

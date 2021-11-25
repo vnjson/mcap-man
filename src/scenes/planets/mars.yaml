@@ -1,0 +1,56 @@
+- clear: all
+  next: true
+- scene:
+    url: http://app1234.xyz/assets/ship.png
+  timeout:
+    timer: 2000
+    exec:
+      next: true
+- $: Мы подлетаем!!!
+  dialog-box: true
+- dialog-box: false
+  scene:
+    url: http://app1234.xyz/assets/mars.jpg
+  timeout:
+    timer: 2000
+    exec:
+      next: true
+
+- dialog-box: true
+  m: Добро пожаловать!
+  #term: nav6_2.yaml
+  scene: false
+  slide:
+    url: http://app1234.xyz/assets/marsianin.webp
+
+- m: Давно не видели человеков
+
+- dialog-box: false
+  slide: false
+  scene:
+    url: http://app1234.xyz/assets/mars.jpg
+  term: false
+  menu:
+    m: С какой целью вы сюда прибыли?
+    _mark2: Осмотреть достопремичательности
+    disabled_1: Захватить Марс
+    disabled_aaa: Пригласить на Землю
+    tutorial.nav: Промолчать и по тихому свалить домой
+    #marsahod: Забрать марсоход на ремонт
+    next: Промолчать
+
+- m: Отказываетесь отвечать?
+  dialog-box: true
+- m: Тогда вам здесь не рады, возвращайтесь туда откуда прибыли
+
+- jump: tutorial.nav
+#########
+- _mark2: true
+  slide:
+    url: http://app1234.xyz/assets/mars_delat_nechego.webp
+  dialog-box: true
+  $: Хотя тут особо не на что смотреть, пойду лучше домой!
+- jump: tutorial.nav
+
+
+

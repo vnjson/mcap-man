@@ -1,0 +1,12 @@
+/$root
+├───assets
+│   ├───background_1024x768_lab.jpg
+│   ├───background_1024x768_lake.jpeg
+│   ├───background_1024x768_library.webp
+│   ├───character_260x450_alice.png
+│   ├───character_260x450_nora.png
+│   ├───slide_XXXxXXX_0.png
+│   └───piano.mp3
+├───$init.yaml
+├───package.yaml
+└───characters.yaml

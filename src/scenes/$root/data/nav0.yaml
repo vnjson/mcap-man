@@ -1,0 +1,13 @@
+./$root/$init.yaml
+- dialog-box: true
+  $: Привет мир!
+- jump: chapter1 
+###########################
+└───$root
+    ├───characters.yaml
+    ├───$init.yaml
+    ├───chapter1.yaml
+    ├───chapter2.yaml
+    ├───chapter3.yaml
+    └───chapter4.yaml
+

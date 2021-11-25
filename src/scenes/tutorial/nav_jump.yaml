@@ -1,0 +1,15 @@
+
+- $: 'Навигация между скриптами осуществляется посредством плагина <i style="color: magenta;">jump</i>'
+  term: nav0.yaml
+
+- $: 'Для того, что бы перейти на другую главу вашей книги, необходимо указывать плагину <i style="color: red;">jump</i> куда хотим отправиться. '
+  term: nav1.yaml
+
+- $: 'Внутри книги <i style="color: gray;">( scene )</i> перемещение между главами осуществляется посредством указания названия главы <i style="color: gray;">( label )</i> <i style="color: magenta;">без расширения    <s style="color: red; font-family: Consolas;">.yaml</s></i> '
+  term: nav2.yaml
+- $: 'Для осуществелия прыжков между книгами необходимо указывать в какую книгу хотим прыгнуть, а так же конкретную главу внутри этой книги. Формат записи такой <span style="font-family: Consolas;"> <i style="color: red;">sceneName</i><b style="color:lightgreen;">.</b><i style="color: orange;">labelName</i>'
+  term: nav3.yaml
+- $: 'Прыжки внутри конкретной метки <span style="font-family: Consolas;"> <i style="color: red;">sceneName</i><b style="color:lightgreen;">.</b><i style="color: orange;">labelName</i><b style="color: lightgreen;">.</b><i style="color: magenta;">index</i></span> можно осуществлять, если указать позицию / индекс внутри скрипта. Индекс начинается с <i style="color: darkcyanl">нуля</i>'
+  term: nav4.yaml
+
+- jump: nav

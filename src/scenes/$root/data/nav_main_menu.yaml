@@ -1,0 +1,13 @@
+- clear: all
+  next: true
+
+- main-menu:
+    beginning.$init: Начинающий
+    experienced.$init: Опытный
+    disabled_item: Продвинутый
+    onClick:
+      dialog-box: true
+      hands: true
+      status-bar: true
+  audio: false
+  scene: lab

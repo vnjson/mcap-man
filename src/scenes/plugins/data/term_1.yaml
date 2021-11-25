@@ -1,0 +1,6 @@
+/scenes
+├───$root
+│   ├───assets
+│   ├───data
+│   │   ├───lesson_1.lua
+│   │   └───lesson_1.py
