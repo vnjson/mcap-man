@@ -5,4 +5,5 @@
 
 # package.yaml
 name: Название
-debug: true  #false  
+debug: true  #false
+preload: true # false

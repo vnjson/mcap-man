@@ -1,10 +1,9 @@
 - zim-intro: true
 
-- zim-ui: true
 
 - $: zim - код подключается как независимый плагин
   term: zim_0.yaml
-  zim-ui: false
+  zim-intro: false
 - $: Откройте папку plugins, скорипурей папку zim-intro и переименуйте. Разместите здесь же в каталоге plugins 
 - 'Библиотеки  <i style="color: orange">create.js</i> и <i style="color: gold"zim.js</i>  уже подключены'
 

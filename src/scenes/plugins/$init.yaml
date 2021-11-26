@@ -1,10 +1,10 @@
 - clear: all
   next: true
-- menu:
+- scene: earch
+  menu:
     $root.$init: . .
     jump: jump - Прыжок между сценами и метками 
     $next: next - Переход на следующий объект скрипта
-    target: target - Прыжок по якорям внутри label 
     timeout: timeout - Вызывает другие плагины по истечению времени
     dialog-box: dialog-box - Диалоговое окно
     scene: scene - Отоброжение заднего фона внутри экрана
@@ -27,5 +27,3 @@
     discord-log: discord-log
     onClick:
       dialog-box: true
-
-  # main-menu

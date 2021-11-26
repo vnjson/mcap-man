@@ -21,8 +21,7 @@
 - Все будет так. Исхода нет.
 - dialog-box: false
   term: false
-  scene:
-    url: http://app1234.xyz/assets/earch.jpg
+  scene: earch
   menu:
     planets.luna: Отправиться на Луну
     planets.mars: Лучше на Марс 

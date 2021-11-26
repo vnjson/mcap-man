@@ -1,18 +1,16 @@
 - clear: all
   next: true
-- scene:
-    url: http://app1234.xyz/assets/ship.png
+- scene: ship
   timeout:
-    timer: 2000
+    timer: 1000
     exec:
       next: true
 - $: Мы подлетаем!!!
   dialog-box: true
 - dialog-box: false
-  scene:
-    url: http://app1234.xyz/assets/mars.jpg
+  scene: mars
   timeout:
-    timer: 2000
+    timer: 1000
     exec:
       next: true
 
@@ -20,15 +18,13 @@
   m: Добро пожаловать!
   #term: nav6_2.yaml
   scene: false
-  slide:
-    url: http://app1234.xyz/assets/marsianin.webp
+  slide: marsianin
 
 - m: Давно не видели человеков
 
 - dialog-box: false
   slide: false
-  scene:
-    url: http://app1234.xyz/assets/mars.jpg
+  scene: mars
   term: false
   menu:
     m: С какой целью вы сюда прибыли?
@@ -46,8 +42,7 @@
 - jump: tutorial.nav
 #########
 - _mark2: true
-  slide:
-    url: http://app1234.xyz/assets/mars_delat_nechego.webp
+  slide: mars_delat_nechego
   dialog-box: true
   $: Хотя тут особо не на что смотреть, пойду лучше домой!
 - jump: tutorial.nav

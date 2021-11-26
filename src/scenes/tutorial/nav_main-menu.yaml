@@ -5,8 +5,7 @@
 
 - $: только стили у него другие и ключевое слово по которому оно вызывается
 
-- scene:
-    url: http://app1234.xyz/assets/earch.jpg
+- scene: earch
   term: false
   dialog-box: false
   main-menu:

@@ -13,7 +13,7 @@
     tutorial.images: Работа с изображениями
     tutorial.audio: Воспроизведение аудио
     tutorial.embed: Подключение внешних ресурсов
-    tutorial.data: Работа с данными
+    tutorial.dta: Работа с данными
     tutorial.zim: Подключение ZIMjs
     plugins.$init: Плагины
     onClick:

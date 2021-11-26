@@ -1,1 +1,7 @@
-scene: imagename
+- scene: imagename
+
+- scene:
+    url: http://app1234.xyz/assets/imagename.jpg
+    
+
+- scene: false

@@ -12,4 +12,25 @@
 - $: 'Прыжки внутри конкретной метки <span style="font-family: Consolas;"> <i style="color: red;">sceneName</i><b style="color:lightgreen;">.</b><i style="color: orange;">labelName</i><b style="color: lightgreen;">.</b><i style="color: magenta;">index</i></span> можно осуществлять, если указать позицию / индекс внутри скрипта. Индекс начинается с <i style="color: darkcyanl">нуля</i>'
   term: nav4.yaml
 
+- $: 'Так же можно пометить какую-нибудь строку свойством начинающимся со знака <i style="color: magenta;">_</i> нижего подёркивания  <i style="color: darkcyan;">_example1: true</i>'
+  term: nav5.yaml
+- $: 'Тогда можно будет совершить прыжок при помощи ключевого слова <i style="color: orange;">target</i>'  
+
+- ex: Сейчас будет выполнен код. Проследите за его выполнением
+- scene: earch
+  next: true
+- a: Там на неведомых дорожках
+- jump: _mark1 # jump to _mark1
+- s: Следы невиданных зверей;
+  _mark2: true
+- s: Избушка там на курьих ножках
+- s: Стоит без окон, без дверей;
+- s: Там лес и дол видений полны;
 - jump: nav
+- a: Там о заре прихлынут волны
+  _mark1: true  
+- a: На брег песчаный и пустой,
+- a: И тридцать витязей прекрасных
+- jump: _mark2 # jump to _mark2
+
+

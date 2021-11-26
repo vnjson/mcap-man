@@ -5,7 +5,6 @@
   menu:
     $root.$init: . .
     nav_jump: jump
-    nav_target: target
     nav_menu: menu
     nav_main-menu: main-menu
     nav_content: content

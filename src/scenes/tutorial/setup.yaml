@@ -12,11 +12,9 @@
 
 - $: 'Далее необходимо сконструировать экран из  блоков <i style="color: magenta">Web Displays</i> или найти уже готовый'
   term: false
-  slide:
-    url: http://app1234.xyz/assets/WebDisplays.png 
+  slide: WebDisplays 
 - $: 'И открыть в нём адреc на котором запустился наш проект  <i style="color: red;">http://localhost:9000</i>'
-  slide:
-    url: http://app1234.xyz/assets/build.png 
+  slide: build
 
 - После каждого сохранения, проект будет автоматически пересобираться.
 - $: "Внутри проекта необходимо открыть папку <i style='color: pink'>./src/scenes</i>"

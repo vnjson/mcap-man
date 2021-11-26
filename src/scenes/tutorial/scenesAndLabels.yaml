@@ -51,13 +51,11 @@
   term: nav4_3.yaml
 - $: test 4
   term: nav4_4.yaml
-
 - $: test 5
   term: nav4_5.yaml
-
 - $: 'Так же желательно создать в корне файл <i style="color: red;">package.yaml</i> где указать дополнительную информацию'
   term: scenes5.yaml
 - $: 'В параметре <i style="color: gold;">name</i> указывается название вашего проекта'
 - $: 'Параметр <i style="color: lightgreen;">debug</i> отображает дополнительные панели, для помощи при работе с движком'
-
+- $: 'Параметр <i style="color: magenta">preload</i> включает предзагрузку изображений в начале игры'
 - jump: $root.$init

@@ -1,0 +1,5 @@
+- center: Alice
+- left: Alice
+  center: false
+- right: Nora
+- jump: plugins.$init

@@ -1,3 +1,0 @@
-- $: set-data
-  term: data_0.yaml
-- jump: $root.$init

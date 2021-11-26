@@ -1,4 +1,10 @@
 
- - center left right
- 
- - jump: $init
+- $: Для вывода изображений персонажей используются плагины center left right
+  term: centerLeftRight.yaml
+- center: Alice
+- left: Alice
+  center: false
+- right: Nora
+- jump: plugins.$init
+
+- jump: $init

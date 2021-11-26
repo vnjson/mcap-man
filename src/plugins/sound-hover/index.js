@@ -4,9 +4,7 @@ export default function (){
 
   var itemSound = new Howl({src: './assets/'+menuItemSound, volume: 0.1});
 
-  $('#screen').on('mouseover', '.sound-hover', function (){
+  $('#screen').on('mousedown', '.sound-hover', function (){
        itemSound.play()
   })
- 
-
 }

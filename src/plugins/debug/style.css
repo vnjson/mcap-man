@@ -145,7 +145,7 @@
   color: gray;
   cursor: pointer;
   user-select: none;
-  border: 1px dashed gray;
+ 
 }
 
 
@@ -218,6 +218,7 @@
   overflow: auto;
   font-size: 16px;
   position: relative;
+  border: 1px solid rgba(0,0,0,0.1);
 }
 #vnjson__tree-root{
   position: absolute;

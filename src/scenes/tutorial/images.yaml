@@ -5,7 +5,7 @@
   term: img_1.yaml
 - a: Медиа ресурсы из этой папки будут автоматически зарегестрированы и станут доступны внутри новелы. 
 - a: Но для этого надо пересобрать сцены, путем сохранения изменений yaml файлов
-- a: 'Поддерживаемый тип файлов: <i style="color: red">png</i> <i style="color: lightgreen">jpg / jpeg</i> <i style="color: orange">webp</i>  <i style="color: yellow">mp3</i> <i style="color: orange">ogg</i> <i style="color: magenta">waw</i>'
+- a: 'Поддерживаемый тип файлов: <i style="color: red">png</i> <i style="color: lightgreen">jpg / jpeg</i> <i style="color: orange">webp</i> <i style="color: orange">gif</i>  <i style="color: yellow">mp3</i> <i style="color: orange">ogg</i> <i style="color: magenta">waw</i>'
 - a: 'Обратите внимание. Имена медиа файлов должны быть <i style="color: #16fa48">уникальными и не содержать пробелов и спец. сиволов</i>'
 - a: 'Важно! Что бы вызвать изображение добавленное в папку assets внутри скрипта. Нам понадобится его <i style="color: red">id</i> '
 - a: ' Индификатором изображения является его название без расширения <span style="font-family: Consolas; color: magenta;">character__260x450_alice  <s style="color: ghostwhite">.png</s></span>'
@@ -30,9 +30,10 @@
   slide: class-room
   center: false
   left: false
-- ex: Еще раз ознакомтесь с только что воспроизведенным кодом
-  term: img_3.yaml
+- $: 'Так же можно подключать изображения через <i style="color: orange">url</i>'
+  term: img_4.yaml
   slide: false
+- $: Но подключение по url не работает для center | left | right
 - jump: $root.$init
 
 
