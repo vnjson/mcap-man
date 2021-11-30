@@ -1,5 +1,15 @@
-Создать папку
-# mkdir folderName
+# mkdir projects
+# cd projects
 
+
+
+
+
+
+
+______________________________
+Создать папку
+# mkdir directoryName
 Удалить папку
-# rm -rf filderName
+# rm -rf directoryName
+

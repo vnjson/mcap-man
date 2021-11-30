@@ -1,4 +1,4 @@
 
- - баллы
- 
- - jump: $init
+- $: баллы
+  term: qa.yaml
+- jump: $init

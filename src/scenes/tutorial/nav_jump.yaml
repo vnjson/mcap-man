@@ -12,9 +12,9 @@
 - $: 'Прыжки внутри конкретной метки <span style="font-family: Consolas;"> <i style="color: red;">sceneName</i><b style="color:lightgreen;">.</b><i style="color: orange;">labelName</i><b style="color: lightgreen;">.</b><i style="color: magenta;">index</i></span> можно осуществлять, если указать позицию / индекс внутри скрипта. Индекс начинается с <i style="color: darkcyanl">нуля</i>'
   term: nav4.yaml
 
-- $: 'Так же можно пометить какую-нибудь строку свойством начинающимся со знака <i style="color: magenta;">_</i> нижего подёркивания  <i style="color: darkcyan;">_example1: true</i>'
+- $: 'Можно пометить какую-нибудь строку свойством начинающимся со знака <i style="color: magenta;">_</i> нижего подчёркивания  <i style="color: darkcyan;">_example1: true</i>'
   term: nav5.yaml
-- $: 'Тогда можно будет совершить прыжок при помощи ключевого слова <i style="color: orange;">target</i>'  
+- $: 'Тогда можно будет совершить прыжок на эту отметку. Но в пределах текущей главы. jump: _example1'  
 
 - ex: Сейчас будет выполнен код. Проследите за его выполнением
 - scene: earch

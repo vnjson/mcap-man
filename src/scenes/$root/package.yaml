@@ -1,4 +1,4 @@
 name: Руководство издателя
-version: 0.7.1
-debug: true  #false
+version: 0.9.1
+debug: false #true  #false
 preload: true #false

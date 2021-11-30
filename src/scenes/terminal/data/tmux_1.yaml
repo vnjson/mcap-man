@@ -1,14 +1,10 @@
 Горячие клавиши для работы с программой tmux
 CTRL + a   Префикс (с него начинаются команды)
 
-
 Ctrl+a " — Разделить текущую панель по горизонтали.
-Так же это можно сделать и командой
-# tmux split-window -h
 Ctrl+a % — Разделить текущую панель по вертикали.
-# tmux split-window -v
 Ctrl+a стрелиНаКлавиатуре — переключение между панелями
-Ctrl+x — Закрыть панель
+Ctrl+a x — Закрыть панель
 Hold Ctrl+a, don’t release it and hold one of the arrow keys — resize pane.
 Ctrl+a c — Создать новое окно
 Ctrl+a w — Список всех окон

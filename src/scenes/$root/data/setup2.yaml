@@ -1,7 +1,8 @@
 # cd ./mcap
 
-/mcvnjson
+/mcap
 ├───public
 ├───src
+├───9000
 ├───rollup.config.js
 └───package.json

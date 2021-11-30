@@ -1,0 +1,12 @@
+- content:
+    - $root.$init: Том 1
+      disabled: Глава 1
+      tutorial.nav: Глава 2
+
+    - $root.$init: Том 2
+      disabled: Глава 1
+      tutorial.nav: Глава 2
+
+    - disabled: Том 3
+      $root.$init: Глава 1
+      tutorial.nav: Глава 2

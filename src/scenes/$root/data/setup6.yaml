@@ -2,4 +2,5 @@
 1 # git clone https://github.com/vnjson/mcap.git
 2 # cd ./mcap
 3 # npm install
-4 # npm run dev
+4 # mv 9000 9001
+5 # npm run dev

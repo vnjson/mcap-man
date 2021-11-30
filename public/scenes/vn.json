@@ -10,16 +10,24 @@
         "url": "./scenes/assets/Alice.png"
       },
       {
-        "name": "build",
-        "url": "./scenes/assets/build.png"
-      },
-      {
         "name": "class-room",
         "url": "./scenes/assets/class-room.webp"
       },
       {
+        "name": "configurator-screen",
+        "url": "./scenes/assets/configurator-screen.png"
+      },
+      {
+        "name": "configurator",
+        "url": "./scenes/assets/configurator.png"
+      },
+      {
         "name": "earch",
         "url": "./scenes/assets/earch.jpg"
+      },
+      {
+        "name": "empty-project",
+        "url": "./scenes/assets/empty-project.png"
       },
       {
         "name": "iron",
@@ -44,6 +52,10 @@
       {
         "name": "linux",
         "url": "./scenes/assets/linux.png"
+      },
+      {
+        "name": "location",
+        "url": "./scenes/assets/location.png"
       },
       {
         "name": "luna",
@@ -86,6 +98,10 @@
         "url": "./scenes/assets/pianino.mp3"
       },
       {
+        "name": "port",
+        "url": "./scenes/assets/port.png"
+      },
+      {
         "name": "rozario_agro",
         "url": "./scenes/assets/rozario_agro.mp3"
       },
@@ -98,12 +114,28 @@
         "url": "./scenes/assets/ship.png"
       },
       {
+        "name": "tag-n",
+        "url": "./scenes/assets/tag-n.png"
+      },
+      {
+        "name": "tag-port",
+        "url": "./scenes/assets/tag-port.png"
+      },
+      {
+        "name": "term",
+        "url": "./scenes/assets/term.png"
+      },
+      {
         "name": "terminal",
         "url": "./scenes/assets/terminal.png"
       },
       {
         "name": "tmux",
         "url": "./scenes/assets/tmux.png"
+      },
+      {
+        "name": "web-display-right-click",
+        "url": "./scenes/assets/web-display-right-click.png"
       },
       {
         "name": "WebDisplays",
@@ -197,30 +229,32 @@
       "scenes4.yaml": "\"- dialog-box: true\\n  next: true  \\n- У лукоморья дуб зелёный;\\n- Златая цепь на дубе том\\n- И днём и ночью кот учёный\\n- Всё ходит по цепи кругом;\\n- Идёт направо — песнь заводит,\\n- Налево — сказку говорит.\\n- Там чудеса там леший бродит,\\n- Русалка на ветвях сидит;\\n- jump: $init\"",
       "scenes5.yaml": "\"/scenes\\n└───$root\\n    ├───$init.yaml\\n    └───package.yaml\\n\\n# package.yaml\\nname: Название\\ndebug: true  #false\\npreload: true # false\"",
       "setup1.yaml": "\"# git clone https://github.com/vnjson/mcap.git\"",
-      "setup2.yaml": "\"# cd ./mcap\\n\\n/mcvnjson\\n├───public\\n├───src\\n├───rollup.config.js\\n└───package.json\\n\"",
+      "setup2.yaml": "\"# cd ./mcap\\n\\n/mcap\\n├───public\\n├───src\\n├───9000\\n├───rollup.config.js\\n└───package.json\\n\"",
       "setup3.yaml": "\"# npm install\"",
-      "setup4.yaml": "\"# npm run dev\\n\\nhttp://localhost:9000\"",
+      "setup4.yaml": "\"# npm run dev\\n\"",
       "setup5.yaml": "\"# cd ./scenes\\n\\n/src/scenes\\n└───$root\\n    └───$init.yaml\\n\"",
-      "setup6.yaml": "\"Команды предварительной подготовки\\n1 # git clone https://github.com/vnjson/mcap.git\\n2 # cd ./mcap\\n3 # npm install\\n4 # npm run dev\\n\""
+      "setup6.yaml": "\"Команды предварительной подготовки\\n1 # git clone https://github.com/vnjson/mcap.git\\n2 # cd ./mcap\\n3 # npm install\\n4 # mv 9000 9001\\n5 # npm run dev\\n\""
     },
     "embed": {
       "key1": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/7E_yOnAWdUk?start=62\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
     },
     "package": {
       "name": "Руководство издателя",
-      "version": "0.7.1",
-      "debug": true,
+      "version": "0.8.5",
+      "debug": false,
       "preload": true
     }
   },
   "planets": {
     "assets": [],
     "data": {
+      "content_1.yaml": "\"- content:\\n    - $root.$init: Том 1\\n      disabled: Глава 1\\n      tutorial.nav: Глава 2\\n\\n    - $root.$init: Том 2\\n      disabled: Глава 1\\n      tutorial.nav: Глава 2\\n\\n    - disabled: Том 3\\n      $root.$init: Глава 1\\n      tutorial.nav: Глава 2\"",
       "nav0.yaml": "\"./$root/$init.yaml\\n- dialog-box: true\\n  $: Привет мир!\\n- jump: chapter1 \\n###########################\\n└───$root\\n    ├───characters.yaml\\n    ├───$init.yaml\\n    ├───chapter1.yaml\\n    ├───chapter2.yaml\\n    ├───chapter3.yaml\\n    └───chapter4.yaml\\n\\n\"",
       "nav1.yaml": "\"./$root/$init.yaml\\n- $: Прыгаем в первую главу книги $root\\n- jump: chapter3 \\n###########################\\n└───$root\\n    ├───characters.yaml\\n    ├───$init.yaml\\n    ├───chapter1.yaml\\n    ├───chapter2.yaml\\n    └───chapter3.yaml\\n\"",
       "nav10.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n\"",
       "nav11.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n    disabled_1: Неактивный элемент должен включать в себя часть слова dissabled\\n\"",
       "nav12.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n    disabled_1: Неактивный элемент должен включать в себя часть слова dissabled\\n    next: Никуда не прыгать, а продолжить выполнение скрипта после меню\"",
+      "nav13.yaml": "\"- menu:\\n    $: Вопрос от имени персонажа. Его может не быть.\\n    chapter1: Прыжок внутри текущей книги / сцены\\n    book2.chapter2: Прыжок в другую книгу /сцену\\n    _mark2: Прыжки по помеченным объектам внутри текущей главы\\n    disabled_1: Неактивный элемент должен включать в себя часть слова dissabled\\n    next: Никуда не прыгать, а продолжить выполнение скрипта после меню\\n    onClick:\\n      dialog-box: true\\n      scene: background  \"",
       "nav2.yaml": "\"./$root/chapter3.yaml\\n- $: Прыгаем во вторую книгу\\n- jump: book_2.$init\\n###########################\\n├───$root\\n│   ├───characters.yaml\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   ├───chapter2.yaml\\n│   └───chapter3.yaml\\n├───book_2\\n│   ├───$init.yaml\\n│   └───chap1.yaml\"",
       "nav3.yaml": "\"./book_2/$init.yaml\\n- $: Прыгаем в третью книгу в главу test_0\\n- jump: book_3.test_0\\n###########################\\n├───$root\\n│   ├───characters.yaml\\n│   ├───$init.yaml\\n│   ├───chapter1.yaml\\n│   ├───chapter2.yaml\\n│   └───chapter3.yaml\\n├───book_2\\n│   ├───$init.yaml\\n│   └───chap1.yaml\\n└───book_3\\n    ├───$init.yaml\\n    └───test_0.yaml\"",
       "nav4.yaml": "\"./book_3/test_0.yaml\\n- $: Так же можно прыгнуть на конкретную строчку внутри текущей главы\\n- jump: book_3.test_0.3\\n###########################\\n# Отсчёт строк внутри главы начинается от нуля\\n- test 0\\n- test 1\\n- test 2\\n- test 3 # сюда будет сделан прыжок\\n- test 4\\n- test 5\"",
@@ -241,9 +275,7 @@
     },
     "luna": [
       {
-        "scene": {
-          "url": "ship"
-        },
+        "scene": "ship",
         "timeout": {
           "timer": 1000,
           "exec": {
@@ -252,9 +284,7 @@
         }
       },
       {
-        "scene": {
-          "url": "luna"
-        },
+        "scene": "luna",
         "timeout": {
           "timer": 1000,
           "exec": {
@@ -378,8 +408,7 @@
           "html": "html - Вывод на экран кусков html кода",
           "content": "content",
           "animate": "animate - Добавление анимации к элементам",
-          "disabled_19": "inv - Инвентарь",
-          "qa": "qa - баллы",
+          "disabled__qa": "qa - баллы",
           "voice": "voice",
           "status-bar": "status-bar",
           "discord-log": "discord-log",
@@ -488,17 +517,21 @@
     ],
     "data": {
       "audio.yaml": "\"- audio:\\n    name: audio1\\n    action: play\\n    speed: 0.3\\n    volume: 0.01\\n    loop: true\\n\\n- audio: false # stop\\n\\n# Так же можно воспроизвести звук в отдельном аудио канале\\n\\n- sound: audio1\"",
-      "centerLeftRight.yaml": "\"- center: Alice\\r\\n- left: Alice\\r\\n  center: false\\r\\n- right: Nora\\r\\n- jump: plugins.$init\"",
+      "centerLeftRight.yaml": "\"- center: Alice\\n- left: Alice\\n  center: false\\n- right: Nora\\n- jump: plugins.$init\"",
       "clear.yaml": "\"- clear: all\\n  next: true\"",
       "dialog-box.yaml": "\"- dialog-box: true # отобразить компонент диалогового окна\\n- dialog-box: false # скрыть компонент диалогового окна\\n- dialog-box: clear # очишает диалоговое окно от реплики и имени персонажа\"",
+      "discord-log.yaml": "\"- discord-log: Привет Мир!\\n- discord-log: true\\n- discord-log: false\\n\\n##############################\\nДля работы плагина необходимо прописать путь к чату, куда будут выводиться сообщения\\nЗделать это можно в файле ./src/plugins/discord-log/config.yaml\\nЗаменив параметр webhook , на тот который вы можете получить в настройках чата\"",
+      "embed.yaml": "\"# ресурсы необходимо разместить в файле ./src/scenes/$root/embed.yaml\\nyt-salut: <iframe width=\\\"100%\\\" height=\\\"100%\\\" src=\\\"https://www.youtube.com/embed/a_o-P-lIDEA?start=50\\\"></iframe>\\n\\n# вызывается из скрипта\\n- yt-salut: true\\n  slide: false\\n  cloud: false\\n\\n- $: youtube\\n  yt-salut: false\\n  next: true\\n\\n- $: code pend\\n  cp-nexus: true\\n  \\n- $: sketchfab\\n  cp-nexus: false\\n  3d-conni: true\\n\\n- 3d-conni: false\\n  yt-muk: true\\n\\n- yt-muk: false\\n  yt-delp: true\\n\\n- yt-delp: false\\n  dialog-box: clear\\n  jump: $init\"",
       "hands.yaml": "\"- hands: true\\n\\n- hand-left: imageName1\\n- hand-right: imageName2\\n\\n- hands: false\"",
       "html.yaml": "\"\\n# кусочки html необходимо разместить в файле ./src/scenes/$root/html.yaml\\nhtmlChunk: <a class=\\\"qr-code\\\" href=\\\"http://qrcoder.ru\\\" target=\\\"_blank\\\"><img src=\\\"http://qrcoder.ru/code/?http%3A%2F%2Fatlant.mcacademy.ru%3A9000%2F&10&0\\\" width=\\\"370\\\" height=\\\"370\\\" border=\\\"0\\\" title=\\\"QR код\\\"></a>\\nredBox: <div class=\\\"red-box\\\"></div>\\n\\n\\n# вызывается из скрипта\\n- htmlChunk: true\\n  redBox: true\\n\\n\\n- htmlChunk: false\\n  redBox: false\\n\\n# так же можно передать css объект\\n- htmlChunk:\\n    css: \\n      top: 50px\\n      left: 100px\\n\\n# при последующем вызове плагина\\n# указывать стили уже не обязательно\\n# он замомнит, стили ранее указанные\\n- htmlChunk: false\"",
       "jump.yaml": "\"#scene1/part1.yaml\\n- У лукоморья дуб зелёный\\n- Златая цепь на дубе том\\n- И днём и ночью кот учёный\\n- Всё ходит по цепи кругом\\n- jump: part2 # Прыжок в метку part2 внутри этой же сцены\\n\\n#scene1/part2.yaml\\n- Идёт направо — песнь заводит,\\n- Налево — сказку говорит.\\n- jump: scene2.$init # Прыжок в другую сцену\\n\\nМожно делать прыжки на конкретную позицию внутри скрипта scene.label.index Позиция внутри label (метки) отсчитывается с нуля\\n#scene2/$init.yaml\\n\\n- Там чудеса: там леший бродит,\\n- Русалка на ветвях сидит\\n- jump: $root.$init.3\\n\\n\"",
       "main-menu.yaml": "\"- menu:\\n    _mark1: В начало\\n    disabled: Общая концепция\\n    $root.$init: Отправиться в начало\\n    next: Список плагинов\\n\\n\\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n\\n# onClick - execute the code after the jump\\n# \\n# \\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n    css:\\n      transform: unset\\n      left: unset\\n      width: 300px\\n      top: 50px\\n      right: 20px\"",
       "menu.yaml": "\"- menu:\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n    next: Пожалуй останусь на Земле #Можно внутри можно использовать [ next ]\\n\\n#next\\n- Земля\\n\\n### ### ##\\n- menu:\\n    $: Куда бы мне отправить #Вопрос от автора\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n### ### ##\\n- menu:\\n    a: Куда бы мне отправить #Вопрос от Алисы\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n### ### ##\\n- menu:\\n    a: Куда бы мне отправить #Вопрос от Алисы\\n    luna: Отправиться на Луну\\n    disabled: Лучше на Марс #Не активный пункт меню\\n    disabled_23: Еще один заблокированный пункт\\n    next: Дальше\\n#Что бы заблокировать пункт меню используется ключевое слово [ disable ]\\n#Но так как заблокировавнных пунктов может быть несколько, а ключи внутри объекта\\n#не могут повторяться, то к ключевому слову пожно прибавить какой-нибудь префикс disabled_24\\n\\n- $: Пример с маркировкой\\n  _mark1: true\\n\\n- menu:\\n    luna: Отправиться на Луну\\n    mars: Лучше на Марс \\n    _mark1: В начало\\n    onClick:\\n      dialog-box: true\\n      scene: background\\n\\n# onClick - Ключевое слово. Принимает объект для выполнения this.exec({ctx})\\n- menu:\\n    _mark1: В начало\\n    disabled: Общая концепция\\n    $root.$init: Отправиться в начало\\n    next: Список плагинов\\n\\n\\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n\\n# onClick - execute the code after the jump\\n# \\n# \\n- menu:\\n    zim-label: Как подключить zim\\n    label_1_tree__fs: Файловая структура\\n    yaml-scripts: YAML скрипты\\n    plug: Список плагинов\\n    disabled: ---\\n    $root.$init: Вернуться в начало\\n    onClick:\\n      hands: true\\n      dialog-box: true\\n    css:\\n      transform: unset\\n      left: unset\\n      width: 300px\\n      top: 50px\\n      right: 20px\"",
       "next.yaml": "\"- Первое сообщение, которое выведится\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- next: true\\n- Второе сообщение которое выведится\"",
-      "scene_p.yaml": "\"- scene: imagename\\r\\n\\r\\n- scene:\\r\\n    url: http://app1234.xyz/assets/imagename.jpg\\r\\n    \\r\\n\\r\\n- scene: false\"",
+      "qa.yaml": "\"\"",
+      "scene_p.yaml": "\"- scene: imagename\\n\\n- scene:\\n    url: http://app1234.xyz/assets/imagename.jpg\\n    \\n\\n- scene: false\"",
       "slide.yaml": "\"- slide: Screenshot_35\\n- slide: false\\n\\n- slide:\\n    name: Screenshot_35\\n    css:\\n      top: 320px\\n      border: 15px dashed orange\\n\\n# загрузка изображения со стороннего сайта     \\n- slide:\\n    url: http://app1234.xyz/assets/ship.png\\n    css:\\n      width: 200px\\n      height: 300px\"",
+      "status-bar.yaml": "\"- status-bar: true\\n- $: 00000\\n- $: 11111\\n- status-bar: false\"",
       "target.yaml": "\"- a: Там на неведомых дорожках\\n- target: _mark1 # jump to _mark1\\n- s: Следы невиданных зверей;\\n  _mark2: true\\n- s: Избушка там на курьих ножках\\n- s: Стоит без окон, без дверей;\\n- s: Там лес и дол видений полны;\\n- jump: $init\\n- a: Там о заре прихлынут волны\\n  _mark1: true  \\n- a: На брег песчаный и пустой,\\n- a: И тридцать витязей прекрасных\\n- target: _mark2 # jump to _mark2\"",
       "term.yaml": "\"- term: lesson_1.py #planeText[extname]\\n\\n- term: lesson_1.lua  \\n\\n- term: imageName # выводит изображение в компоненте терминала\\n\\n- term: false # скрыть терминал\\n\\n- term: clear # очистить терминал\"",
       "term_1.yaml": "\"/scenes\\n├───$root\\n│   ├───assets\\n│   ├───data\\n│   │   ├───lesson_1.lua\\n│   │   └───lesson_1.py\"",
@@ -514,13 +547,22 @@
       }
     ],
     "discord-log": [
-      "discord-log",
+      {
+        "$": "discord-log - предназначен для отправки сообщения в дискорд через webhook",
+        "term": "discord-log.yaml"
+      },
+      {
+        "$": "В конрне этого плагина лежит файл config.yaml В нём необходимо указать webhook"
+      },
       {
         "jump": "$init"
       }
     ],
     "embed": [
-      "embed",
+      {
+        "$": "embed",
+        "term": "embed.yaml"
+      },
       {
         "jump": "$init"
       }
@@ -562,7 +604,10 @@
       }
     ],
     "qa": [
-      "баллы",
+      {
+        "$": "баллы",
+        "term": "qa.yaml"
+      },
       {
         "jump": "$init"
       }
@@ -592,7 +637,22 @@
       }
     ],
     "status-bar": [
-      "status bar",
+      {
+        "$": "Предназначен для вывода статуса игрока. Выполнил ли он задание или ему требуются дополнительные разъяснения",
+        "term": "status-bar.yaml"
+      },
+      {
+        "status-bar": true
+      },
+      {
+        "$": 0
+      },
+      {
+        "$": 11111
+      },
+      {
+        "status-bar": false
+      },
       {
         "jump": "$init"
       }
@@ -630,48 +690,37 @@
     "assets": [],
     "$init": [
       {
-        "$": "Если вы когда - нибудь видели фильмы, где присутствовал какой-нибудь хакер, который сидел перед чёрным экраном с зелёными символами",
-        "slide": "neo"
+        "$": "Терминал - это интерфейс, в котором вы можете писать названия программ и они будут запускаться.",
+        "slide": "term"
       },
       {
-        "$": "И что то печатал на клавиатуре, то скорее всего он работал с терминалом"
-      },
-      {
-        "$": "У нас тоже есть терминал, только в нём в больщинстве  символы белые.",
-        "slide": "terminal",
-        "warn": "Поменять скриншот"
-      },
-      {
-        "$": "Терминал - это интерфейс, в котором вы можете писать названия программ и они будут запустится."
-      },
-      {
-        "$": "Зайдите в терминал на компьютере который вы запустили в  MineCraft. Кликнув правой кнопкой мыши по монитору"
-      },
-      {
-        "$": "Если система загрузилась, то вам будет предложено в вести  имя пользователя и пароль."
-      },
-      {
-        "$": "Если логин и пароль верны, то мы попадём в папку ( каталог ) текущего пользователя",
+        "$": "Если ввести команду <i style=\"color: red\">ls</i> <i style=\"color: gold\"> -1a</i>",
         "term": "t_0.yaml",
         "slide": false
       },
       {
-        "$": "Если ввести команду <i style=\"color: red\">ls</i> <i style=\"color: gold\"> -1a</i>"
-      },
-      {
-        "$": "То мы увидим примерно такую структуру",
+        "$": "То мы увидим примерно такую структуру. Это содержимое папки текущего пользователя.",
         "term": "t_0_1.yaml"
       },
-      "Символ  <i style=\"color: red\">-</i> ( тире ) указывает на то какие опции ( параметры ) передать в эту программу. Что бы она понимала на что обратить внимание",
-      "<i style=\"color: red\">audio-player</i> <i style=\"color: gold\">-p=9000</i> Если указывается сокращенная форма записи параметром, то используется одно тире.",
-      "<i style=\"color: red\">audio-player</i> <i style=\"color: gold\">--port=9000</i> Если указывается полная форма записи параметром, то используется два тире.",
-      "<i style=\"color: red\">audio-player</i> <i style=\"color: lightgreen\">./path/to/file.mp3</i> <i style=\"color: gold\">--port=9000</i> Так же некоторым программам необходимо передать путь к файлу, который она может как то использовать",
+      "Символ  <i style=\"color: red\">-</i> ( тире ) указывает на то какие опции ( параметры ) передать в эту программу",
       {
-        "$": "Если мы хотим создать папку на своем только что запущеном компе.",
+        "$": "Пока нам тут делать нечего, поэтому перейдем к самому верхнему уровню каталогов нашей системы. Написав и выполнив эти две команды.",
+        "term": "t_1_1.yaml"
+      },
+      {
+        "$": "Программа <i style=\"color: gold\">cd</i> отвечает за переходы между папками, а <i style=\"color: orange\">ls</i> за отображение содержимого",
+        "term": "t_1.yaml"
+      },
+      {
+        "$": "Перед вами должна предстать примерно такая картина. Это что то вроде корня жёсткого диска.",
+        "term": "t_1_2.yaml"
+      },
+      {
+        "$": "Давате сделаем папку для своих проектов. И перейдём в неё.",
         "term": "t_2.yaml"
       },
       {
-        "$": "Для этого мы вополняем команду <i style=\"color: red\">mkdir</i> ставим пробел и указываем название папки <i style=\"color: gold\">folderName</i>"
+        "$": "Для этого мы вополняем команду <i style=\"color: red\">mkdir</i> ставим пробел и указываем название папки <i style=\"color: gold\">project</i>"
       },
       {
         "$": "Файл можно создать командой <i style=\"color: red\">touch</i> ставим пробел и указываем название файла <i style=\"color: gold\">fileName.txt</i>",
@@ -681,28 +730,32 @@
         "$": "В одном окне работать не слишком удобно поэтому давайте запустим менежер рабочего пространства <i style=\"color: gold\">tmux</i>",
         "term": "tmux_0.yaml"
       },
+      "Выполните все команды по очереди и экран разделится на несколько частей",
       {
-        "$": "Горячиче клавиши для роботы с tmux",
-        "term": "tmux_1.yaml"
+        "slide": "tmux",
+        "$": "Должно получить примерно так",
+        "term": false
       },
       {
-        "term": false,
-        "slide": "tmux",
-        "$": "Должно получить примерно так"
+        "$": "Горячиче клавиши для роботы с tmux",
+        "term": "tmux_1.yaml",
+        "slide": false
       },
       {
         "jump": "$root.$init"
       }
     ],
     "data": {
-      "tmux_0.yaml": "\"Очистить терминал\\n# clear\\nЗапустить tmux\\n# tmux\\n\"",
-      "tmux_1.yaml": "\"Горячие клавиши для работы с программой tmux\\nCTRL + a   Префикс (с него начинаются команды)\\n\\n\\nCtrl+a \\\" — Разделить текущую панель по горизонтали.\\nТак же это можно сделать и командой\\n# tmux split-window -h\\nCtrl+a % — Разделить текущую панель по вертикали.\\n# tmux split-window -v\\nCtrl+a стрелиНаКлавиатуре — переключение между панелями\\nCtrl+x — Закрыть панель\\nHold Ctrl+a, don’t release it and hold one of the arrow keys — resize pane.\\nCtrl+a c — Создать новое окно\\nCtrl+a w — Список всех окон\\nCtrl+a n — Перейти на следующее окно\\nCtrl+a p — Перейти на предыдущее окно\"",
+      "tmux_0.yaml": "\"Очистить терминал\\n# clear\\nЗапустить tmux\\n# tmux\\nРазделяем экран на две части по горизонтали\\n# tmux split-window -h \\nРазделяем одну половинку ещё и по вертикали\\n# tmux split-window -v \\nЗапускаем  Midnight Commander для удобной навигации\\n# mc\\n\"",
+      "tmux_1.yaml": "\"Горячие клавиши для работы с программой tmux\\nCTRL + a   Префикс (с него начинаются команды)\\n\\nCtrl+a \\\" — Разделить текущую панель по горизонтали.\\nCtrl+a % — Разделить текущую панель по вертикали.\\nCtrl+a стрелиНаКлавиатуре — переключение между панелями\\nCtrl+a x — Закрыть панель\\nHold Ctrl+a, don’t release it and hold one of the arrow keys — resize pane.\\nCtrl+a c — Создать новое окно\\nCtrl+a w — Список всех окон\\nCtrl+a n — Перейти на следующее окно\\nCtrl+a p — Перейти на предыдущее окно\"",
       "t_0.yaml": "\"Показать список файлов и папок в текущем каталоге\\n# ls\\nСкрытые файлы тоже показывать\\n# ls -1a\\n\"",
       "t_0_1.yaml": "\".                            \\n..                           \\n.bash_history                \\n.bashrc                      \\n.cache                       \\n.config                      \\n.gnupg                       \\n.local                       \\nlsblk_raw                    \\n.npm                         \\n.profile                     \\nsnap                         \"",
       "t_1.yaml": "\"Перейти в корневой каталог\\n# cd /\\n\\nПерейти в каталог пользователся\\n# cd ~\\n\\nТекущий каталог\\n# cd .\\n# cd ./\\n\\nПерейти из этой папки на уровень вложенности выше\\n# cd ..\\n# cd ../../../home\"",
-      "t_2.yaml": "\"Создать папку\\n# mkdir folderName\\n\\nУдалить папку\\n# rm -rf filderName\"",
+      "t_1_1.yaml": "\"# cd /\\n# ls -1a\"",
+      "t_1_2.yaml": "\"bin       \\nboot      \\ndev       \\netc       \\nhome      \\nlib       \\nlib64     \\nmedia     \\nmnt       \\nopt       \\nroot      \\nrun       \\nsys       \\ntmp       \\nusr       \\nvar       \"",
+      "t_2.yaml": "\"# mkdir projects\\n# cd projects\\n\\n\\n\\n\\n\\n\\n\\n______________________________\\nСоздать папку\\n# mkdir directoryName\\nУдалить папку\\n# rm -rf directoryName\\n\\n\"",
       "t_3.yaml": "\"# touch fileName.txt\\n\\nТак же можно создать файл и передать в него какой то текст\\n\\n# echo text1 text2>file.txt\\n\\nОтобразить содержимое файла на экране\\n# cat file.txt\"",
-      "t_9999.yaml": "\"Несколько дополнительных команд\\n\\nПерезагрузить компьютер\\n# reboot\""
+      "t_9999.yaml": "\"Несколько дополнительных команд\\n\\nПрервать выполнение программы\\nCtrl + C\\nПерезагрузить компьютер\\n# reboot\""
     }
   },
   "tutorial": {
@@ -772,7 +825,8 @@
       "img_0.yaml": "\"/scenes\\n└───$root\\n    ├───assets\\n    ├───$init.yaml\\n    ├───package.yaml\\n    └───characters.yaml\"",
       "img_1.yaml": "\"/$root\\n├───assets\\n│   ├───background_1024x768_lab.jpg\\n│   ├───background_1024x768_lake.jpeg\\n│   ├───background_1024x768_library.webp\\n│   ├───character_260x450_alice.png\\n│   ├───character_260x450_nora.png\\n│   ├───slide_XXXxXXX_0.png\\n│   └───piano.mp3\\n├───$init.yaml\\n├───package.yaml\\n└───characters.yaml\\n\"",
       "img_3.yaml": "\"- scene: background_1024x768_lake\\n  s: На задной фон ставим изображение с озером\\n- m: А теперь изображение лаборатории\\n  scene: background_1024x768_lab\\n- a: Теперь ты можешь увидеть как я выгляжу\\n  right: character_260x450_alice\\n- a: А теперь я появлилась тут\\n  left: character_260x450_alice\\n  right: false\\n  scene: false\\n- a: А это моя подруга Нора\\n  center: character_260x450_nora\\n- $: Таким вот образом отображается произвольное изображение по центру\\n  slide: slide_XXXxXXX_0\\n  center: false\\n  left: false\\n- jump: $root.$init\\n  slide: false\"",
-      "img_4.yaml": "\"- scene:\\r\\n    url: http://site.ru/image-name.jpg\\r\\n- slide:\\r\\n    url: http://site.ru/image-name2.jpg\\r\\n\"",
+      "img_4.yaml": "\"- scene:\\n    url: http://site.ru/image-name.jpg\\n- slide:\\n    url: http://site.ru/image-name2.jpg\\n\"",
+      "setup_mv.yaml": "\"# mv 9000 9001\"",
       "zim_0.js": "\"// ./src/plugins.js\\n// Подключаем плагин к движку. В конце строк с ключевым словом import \\n// добавьте путь к своему новому плагину\\nimport zimIntroCopy from './plugins/zim-intro-copy/index.js'\\n\\n// И чуть ниже регестрируем плагин. Что бы движок узнал о нём\\nthis.use( zimIntroCopy )\"",
       "zim_0.yaml": "\"/src/plugins\\n├───zim-intro\\n│   ├───index.js\\n│   └───zim.js\\n\"",
       "zim_1.js": "\"/* ./src/plugins/zim-ui/zim.js  */\\nexport const event = \\\"zim-entry-copy\\\" // Название события по которому будет вызываться\\n\\nexport function init (){\\n  //Необходимо что бы frame был доступен в глобальном пространстве имён\\n  //для этого мы создадим свойсво window.frame и определим в него экземпляр класса Frame\\n  //обратите внимание что id=zim \\n  window.frame = new Frame('zim', 1024, 768, light, dark);\\n\\n}\"",
@@ -962,32 +1016,30 @@
     ],
     "entry": [
       {
-        "$": "Сперва необходимо зайти на этой MineCraft server",
+        "$": "Первый делом необходимо зайти на наш сервер",
         "slide": "server_name"
       },
       {
-        "$": "Далее необходимо внутри майнкрафт найти компьтер. Выгладит он примерно так",
-        "slide": "linux"
-      },
-      {
-        "$": "Если вы уверены в своих силах, то можете сами собрать себе компьютер из запчастей",
+        "$": "Далее постарайтесь найти компьтер внутри MineCraft. Выгладит он примерно так",
         "slide": "pc"
       },
-      "Первые две детали компьютера - это системный блок и монитор.",
-      "Монитор он и в Африке монитор, поэтому говорить тут особо не о чем.",
-      "Разве что стоит обратить внимание на то, что монитор должен прилегать одной из своих  стенок к системному блоку",
+      "Компьютер состоит из двух частей. Системный блок  и монитор.",
       {
-        "$": "Минимальное количество оборудования, которое нам нужно для того, что бы наш системник заработал",
+        "$": "Откройте интерфейс  системного блока и запустите компьютер нажав на красную кнопку.",
         "slide": "iron"
       },
-      "Это <i style=\"color: magenta\">планка оперативной памяти</i>, <i style=\"color: orange\">сетевая карта</i> и <i style=\"color: gold\">жёсткий диск</i>",
       {
-        "$": "Обратите внимание на то, что  <i style=\"darkcyan\">жёсткий диск</i> должен быть с установленой операционной  системой"
+        "$": "Закройте окно интерфейса и загляните в монитор. Там должен происходить процесс загрузки операционной системы <i style=\"color: red\">Ubuntu</i>, которая построена на ядре <i style=\"color: cyan\">Linux<i>",
+        "slide": "term"
       },
-      "Нажимаем кнопку пуска и закрываем окно интерфейса для взаимодействия с системным блоком и тыкаем на экран.",
-      "Экран показывает нам процесс загрузки операционной системы <i style=\"color: red\">Ubuntu</i>, которая построена на ядре <i style=\"color: cyan\">Linux<i>",
-      "Следует отметить, что операционная система установленная на наш диск не имеет графического интерфейса.",
+      "Следует отметить, что операционная система установленная на жёсткий диск не имеет графического интерфейса.",
       "Поэтому взаимодействовать с ней мы будет через <i style=\"color: orange\">terminal</i>",
+      {
+        "$": "Если система загрузилась, то вам будет предложено в вести  имя пользователя и пароль."
+      },
+      {
+        "$": "Если логин и пароль верны, то мы попадём в папку ( каталог ) текущего пользователя"
+      },
       {
         "jump": "$root.$init"
       }
@@ -1001,11 +1053,11 @@
         "a": "Для этого предусмотрена папка <i style=\"color: orange\">assets</i>, которую необходимо разместить внутри сцены"
       },
       {
-        "a": "В эту папку необходимо добавить изображения. Так же в этот каталог добавляются и аудио материалы.",
+        "a": "Туда можно добавлять как изображения, так и аудио материалы",
         "term": "img_1.yaml"
       },
       {
-        "a": "Медиа ресурсы из этой папки будут автоматически зарегестрированы и станут доступны внутри новелы."
+        "a": "Медиа ресурсы из этой директории будут автоматически зарегестрированы и станут доступны внутри новелы."
       },
       {
         "a": "Но для этого надо пересобрать сцены, путем сохранения изменений yaml файлов"
@@ -1051,7 +1103,7 @@
       },
       {
         "$": "Таким вот образом отображается произвольное изображение по центру",
-        "slide": "class-room",
+        "slide": "iron",
         "center": false,
         "left": false
       },
@@ -1114,6 +1166,17 @@
     ],
     "nav_content": [
       {
+        "$": "Плагин content поможет, если вам потребудется создавать вложенные струкуры для навигации",
+        "term": "content_1.yaml"
+      },
+      "Правда уровень вложености всего один.",
+      "Если для этого плагина можно создать отдельную главу в $root и дать ей название content.yaml",
+      {
+        "$": "То можно будет воспользоваться кнопкой для его вызова. Которая находится  в правом нижнем углу",
+        "hands": true
+      },
+      {
+        "term": false,
         "content": [
           {
             "$root.$init": "Том 1",
@@ -1155,11 +1218,11 @@
         "term": "nav4.yaml"
       },
       {
-        "$": "Так же можно пометить какую-нибудь строку свойством начинающимся со знака <i style=\"color: magenta;\">_</i> нижего подёркивания  <i style=\"color: darkcyan;\">_example1: true</i>",
+        "$": "Можно пометить какую-нибудь строку свойством начинающимся со знака <i style=\"color: magenta;\">_</i> нижего подчёркивания  <i style=\"color: darkcyan;\">_example1: true</i>",
         "term": "nav5.yaml"
       },
       {
-        "$": "Тогда можно будет совершить прыжок при помощи ключевого слова <i style=\"color: orange;\">target</i>"
+        "$": "Тогда можно будет совершить прыжок на эту отметку. Но в пределах текущей главы. jump: _example1"
       },
       {
         "ex": "Сейчас будет выполнен код. Проследите за его выполнением"
@@ -1256,7 +1319,14 @@
         "$": "Так же возможно использовать плагин <i style=\"color: magenta;\">next</i> внутри меню. Этот плагин делает прыжок на следующую строку и выполняет её",
         "term": "nav12.yaml"
       },
-      "<i style=\"color: magenta;\">next</i> можно использовать независимо от меню. Там где может понадобится возможность без клика пользоватеся, выполнить объект и перескочить туда где пользователь уже может контролировать поведение новеллы",
+      "<i style=\"color: magenta;\">next</i> можно использовать независимо от меню.",
+      {
+        "$": "Свойство <i style=\"color: red;\">onCLick</i> принимает объект для выполнения после совершения прыжка.",
+        "term": "nav13.yaml"
+      },
+      "Допустим вы скрываете диалоговое окно, когда отображается меню.",
+      "И если совершать прыжок во все пункты меню, то в каждом из них нужно будет заново отобразить диалоговое окно",
+      "Но этого можно избежать, если в свойстве <i style=\"color: red;\">onCLick</i> будут пропысаны необходимые команды",
       {
         "ex": "Сейчас будет выполнен код. Проследите за его выполнением",
         "term": "nav6.yaml"
@@ -1387,12 +1457,12 @@
     ],
     "setup": [
       {
-        "$": "Что бы начать работать с движком <i style=\"color:darkcyan;\">mcvnjson</i> необходимо сперва запустить терминал и выполнить команду приведённую на экране",
+        "$": "Что бы начать работать с движком <i style=\"color:darkcyan;\">mcvnjson</i> необходимо в терминале, перейти в рабочую папку и выполнить команду приведённую на экране",
         "term": "setup1.yaml"
       },
       "Которая загрузит шаблон для вашего учебного пособия",
       {
-        "$": "Откройте ваш проект, там где распологается его корень. А он располагается там где расположен файл <i style=\"color: red; font-femaly: Consolas;\">package.json</i>",
+        "$": "Откройте скачаный шаблон, там где распологается его корень. А он располагается там где расположен файл <i style=\"color: red; font-femaly: Consolas;\">package.json</i>",
         "term": "setup2.yaml"
       },
       {
@@ -1400,29 +1470,77 @@
         "term": "setup3.yaml"
       },
       {
-        "$": "После чего нужно произвести запуск сборки поекта, делается это в терминале командой <i style=\"color: red\">npm run dev</i>",
+        "$": "После чего необходимо переименовать файл  <i style=\"color: red;\">9000</i> в номер порта, который раздаёт запущеная вами операционная система",
+        "slide": "port",
+        "term": false
+      },
+      "Номер порта можно узнать подойдя к системногу блоку и заглянуть в него.",
+      {
+        "$": "В одном из слотов должна находиться <i style=\"color: magenta\">метка</i>",
+        "slide": "tag-port"
+      },
+      {
+        "$": "Название метки - это та цифра, которую необходимо прибавить к числу <i style=\"color: orange;\">9000</i>",
+        "slide": "tag-n"
+      },
+      "<i style=\"color: orange;\">9000</i> <i style=\"color: #8020df0;\">+</i> <i style=\"color: magenta;\">1</i> = <i style=\"color: red;\">9001</i>",
+      "Результатом этой математической операции станет число, которое является портом раздаваемым запущеной вами операционной системом <i style=\"color: red;\">ubuntu</i>",
+      {
+        "$": "Далее необходимо переименовать файл <i style=\"color: magenta;\">9000</i>, который находится в корне проекта в номер порта который вы вычислили",
+        "slide": "port"
+      },
+      {
+        "$": "Сделать это можно командой  <i style=\"color: red;\">mv</i>",
+        "term": "setup_mv.yaml",
+        "slide": false
+      },
+      {
+        "$": "После чего нужно произвести запуск сборки поекта, выполнив команду <i style=\"color: red\">npm run dev</i>",
         "term": "setup4.yaml"
       },
       {
-        "$": "Запусится локальный сервер  по адресу <i style=\"color: red;\">http://localhost:9000</i>"
+        "$": "Запусится локальный сервер  по адресу <i style=\"color: red;\">http://localhost:9001</i> где цифра <i style=\"color: magenta\">1</i> - это номер метки компьютера"
       },
+      "Например, если в названии метки стоит число <i style=\"color: #00ff00\">7</i>, то наш адрес для запуска новелы будет <i style=\"color: gold;\">http://localhost:9007</i>",
       {
-        "$": "Далее необходимо сконструировать экран из  блоков <i style=\"color: magenta\">Web Displays</i> или найти уже готовый",
+        "$": "Отвернёмся от терминала и сконструируем экран из  блоков <i style=\"color: magenta\">Web Displays</i> или поищем уже готовый",
         "term": false,
         "slide": "WebDisplays"
       },
       {
-        "$": "И открыть в нём адреc на котором запустился наш проект  <i style=\"color: red;\">http://localhost:9000</i>",
-        "slide": "build"
+        "$": "Активируем его нажатием правой кнопкой мыши",
+        "slide": "web-display-right-click"
       },
-      "После каждого сохранения, проект будет автоматически пересобираться.",
+      "Далее нажатием сочетания клавиш Shift + Правая кнопка мыши, откроем интерфейс для ввода адреса сайта",
+      {
+        "$": "Пишем адрес на котором запустился наш проект  <i style=\"color: red;\">http://localhost:9001</i>",
+        "slide": "location"
+      },
+      {
+        "$": "Так же нам понадобится настроить созданный монитор при помощи специального инструмента",
+        "slide": "configurator"
+      },
+      {
+        "$": "Базовое разрешение для новелы 1024 x 768 , а в режиме разработки 1400 x 1080 . Убедитесь, что убрали галочку с пункта Lock ratio",
+        "slide": "configurator-screen"
+      },
+      {
+        "$": "Если всё прошло нормально, то вы увидите следующую картину.",
+        "slide": "empty-project"
+      },
       {
         "$": "Внутри проекта необходимо открыть папку <i style='color: pink'>./src/scenes</i>",
         "term": "setup5.yaml",
         "slide": false
       },
       {
-        "$": "Это и есть наш рабочий каталог. Где будет происходить 99% работы.",
+        "$": "Это и есть рабочий каталог где будет происходить оснавная часть работы по созданию вашего проекта."
+      },
+      {
+        "$": "После каждого сохранения измений в файлах внутри этой папки, проект будет автоматически пересобираться."
+      },
+      {
+        "$": "Перечень команд которые необходимо было выполнить",
         "term": "setup6.yaml"
       },
       {

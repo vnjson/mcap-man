@@ -1,12 +1,10 @@
-- scene:
-    url: ship
+- scene: ship
   timeout:
     timer: 1000
     exec:
       next: true
   
-- scene:
-    url: luna
+- scene: luna
   timeout:
     timer: 1000
     exec:
@@ -19,5 +17,4 @@
 
 - lu: Тебе здесь не рады
 - lu: Отправляйся лучше на Марс. Там более рудушно принимают гостей.
-
 - jump: mars

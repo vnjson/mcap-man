@@ -2,3 +2,9 @@
 # clear
 Запустить tmux
 # tmux
+Разделяем экран на две части по горизонтали
+# tmux split-window -h 
+Разделяем одну половинку ещё и по вертикали
+# tmux split-window -v 
+Запускаем  Midnight Commander для удобной навигации
+# mc

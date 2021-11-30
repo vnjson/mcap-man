@@ -1,0 +1,4 @@
+- status-bar: true
+- $: 00000
+- $: 11111
+- status-bar: false

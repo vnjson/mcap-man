@@ -1,4 +1,10 @@
 
- - status bar
- 
- - jump: $init
+- $: Предназначен для вывода статуса игрока. Выполнил ли он задание или ему требуются дополнительные разъяснения
+  term: status-bar.yaml
+
+- status-bar: true
+- $: 00000
+- $: 11111
+- status-bar: false
+
+- jump: $init

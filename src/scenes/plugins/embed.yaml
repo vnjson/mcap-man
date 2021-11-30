@@ -1,3 +1,4 @@
 
- - embed
- - jump: $init
+- $: embed
+  term: embed.yaml
+- jump: $init

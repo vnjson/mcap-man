@@ -20,8 +20,7 @@
     html: html - Вывод на экран кусков html кода
     content: content
     animate: animate - Добавление анимации к элементам
-    disabled_19: inv - Инвентарь
-    qa: qa - баллы
+    disabled__qa: qa - баллы
     voice: voice
     status-bar: status-bar
     discord-log: discord-log
