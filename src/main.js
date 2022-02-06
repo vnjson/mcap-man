@@ -30,7 +30,7 @@ function init (tree){
   $vnjs.on('postload', ()=>{
       $vnjs.exec({screen: 'stream'})
       // ?jump=scene.label
-      // ?jump=scene  //default $init
+      // ?jump=scene //default $init
       const label = new URL( location.href ).searchParams.get("jump")
       if(label){
         label.includes('.')? $vnjs.exec({jump:  label}):$vnjs.exec({jump:  label+'.$init'})
