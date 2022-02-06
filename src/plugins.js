@@ -23,7 +23,7 @@ import soundHover         from './plugins/sound-hover/index.js'
 import clear              from './plugins/clear/index.js'
 import data               from './plugins/data/index.js'
 import qa                 from './plugins/qa/index.js'
-import loadScene          from './plugins/load-scene/index.js'
+//import loadScene          from './plugins/load-scene/index.js'
 import slide              from './plugins/slide/index.js'
 import content            from './plugins/content/index.js'
 import voice              from './plugins/voice/index.js'
@@ -64,7 +64,7 @@ export default function(){
   this.use(hands)
   this.use(data)
   this.use(qa)
-  this.use(loadScene)
+  //this.use(loadScene)
   this.use(slide)  
   this.use(content)
   this.use(voice)

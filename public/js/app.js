@@ -2024,7 +2024,7 @@
       $vnjs.exec({
         screen: 'stream'
       }); // ?jump=scene.label
-      // ?jump=scene  //default $init
+      // ?jump=scene //default $init
 
       const label = new URL(location.href).searchParams.get("jump");
 
