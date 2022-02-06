@@ -16,6 +16,7 @@ import menu               from './plugins/menu/index.js'
 import mainMenu           from './plugins/main-menu/index.js'
 import term               from './plugins/term/index.js'
 import show               from './plugins/show/index.js'
+import showAuto           from './plugins/show-auto/index.js'
 import scene              from './plugins/scene/index.js'
 import soundHover         from './plugins/sound-hover/index.js'
 
@@ -50,6 +51,7 @@ export default function(){
   /*components*/
   this.use(scene)
   this.use(show)
+  this.use(showAuto)
   this.use(audio)
   this.use(animate)
   this.use(menu)
